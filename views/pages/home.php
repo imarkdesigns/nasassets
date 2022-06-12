@@ -1,7 +1,6 @@
 <main id="main" class="main" role="main">
 
-<?php echo do_shortcode( '[wppb-edit-profile form_name="ondemand-profile-information"]' ); /* ?>
-
+test...
 
 <section class="uk-section" data-module="comments-module">
     <div class="uk-container uk-container-expand">
@@ -60,8 +59,6 @@ get_template_part( _opt . 'stories' );
 
 // Import News
 get_template_part( _opt . 'news' );
-
-*/
 
 ?>
 </main>
