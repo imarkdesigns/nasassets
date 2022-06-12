@@ -36,13 +36,9 @@
     </div>
 </section>
 
-
 <?php
-
 // Import Success Stories
-get_template_part( _opt . 'stories' );
-
-?>
+get_template_part( _opt . 'stories' ); ?>
 
 <section class="uk-section" data-module="ondemand-module">
     <div class="uk-overlay-primary uk-position-cover"></div>
@@ -54,9 +50,7 @@ get_template_part( _opt . 'stories' );
 </section>
 
 <?php
-
 // Import News
-get_template_part( _opt . 'news' );
+get_template_part( _opt . 'news' ); ?>
 
-?>
 </main>
