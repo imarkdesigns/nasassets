@@ -1,0 +1,70 @@
+// Read More Circle
+.readmore {
+    position: absolute;
+    left: calc( 45px + (50% - 60px) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0,0%,20%,1);
+    font-size: 0.875rem;
+    color: hsla(0,0%,100%,.9);
+    border-radius: 50%;
+    transition: background 300ms ease-out;
+
+    &:hover {
+        background: hsla(0,0%,10%,1);
+        color: hsla(0,0%,100%,1);
+        text-decoration: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-image: linear-gradient(to bottom, #90C43D, #000);
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    &.-large {
+        @include size(120px);
+
+        &::after {
+            @include size(125px);    
+        }
+    }
+}
+
+// Button
+.uk-button {
+    line-height: normal;
+    padding: .75em 1.5em;
+    border-radius: 2px;
+
+    &.uk-button-primary {
+        background-color: $button;
+        color: hsla(0,0%,100%,.9);
+    }
+
+    &.uk-button-primary:focus,
+    &.uk-button-primary:hover {
+        background-color: darken($button, 5%);
+        color: hsla(0,0%,100%,1);
+    }
+
+}
+
+// Headings
+.uk-headings h2 {
+    @include bodoni();
+    font-size: 3rem;
+
+    span {
+        display: block;
+        @include proxima_regular();
+        font-size: 1.125rem;
+        text-transform: uppercase;
+    }
+}

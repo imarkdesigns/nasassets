@@ -1,0 +1,57 @@
+[data-module="news-module"] {
+
+    // Hack the Slider Item
+    .uk-grid-small > * {
+        padding-left: 10px;
+    }
+
+    .uk-panel {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 450px;
+    }
+
+    .uk-inline {
+        margin: 0;
+
+        img {
+            height: 450px;
+            border-radius: 2px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .uk-overlay-primary {
+        background-color: hsla(0,0%,0%,.4);
+        background-blend-mode: multiply;
+        border-radius: 2px;
+
+        span {
+            font-size: 0.875rem;
+            color: hsla(0,0%,80%,.9);
+            text-transform: uppercase;
+        }
+
+        .news-title {
+            font-size: 1.125rem;
+            color: hsla(0,0%,100%,.9);
+            line-height: 1.2;
+            margin: 15px 0 0;
+        }
+    }
+
+    @media ( min-width: 640px ) {
+
+        .uk-panel {
+            height: 550px;
+        }
+
+        .uk-inline img {
+            height: 550px;
+        }
+
+    }
+
+}

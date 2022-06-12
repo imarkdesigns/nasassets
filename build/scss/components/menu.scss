@@ -1,0 +1,122 @@
+[data-globals="menu"] {
+    position: relative;
+    inset: 0;
+
+    .uk-logo {
+        background-image: url(#{$img}/logo-nasassets.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 35px;
+        outline-offset: -7px;
+        white-space: nowrap;
+        @include size(160px, 45px);
+        @include hideText();
+    }
+
+    @media ( min-width: 640px ) {
+
+        .uk-logo {
+            background-position: center;
+            background-size: 160px 45px;
+        }
+
+    }
+
+    .uk-navbar {
+        background-color: $menu-bg;
+        height: 80px;
+
+        .uk-navbar-left {
+            padding-left: 15px;
+        }
+
+        .uk-navbar-right {
+            padding-right: 15px;
+        }
+
+        .uk-navbar-nav {
+            gap: 15px;
+        }
+
+        .uk-navbar-nav > li > a {
+            @include proxima_regular();
+            color: hsla(0,0%,100%,.9);
+            text-transform: none;
+            padding: 0;
+
+            &:focus,
+            &:hover {
+                color: $button;
+            }
+        }
+    }
+
+    .uk-navbar-dropdown {
+        background: none;
+        margin-top: 3px;
+        min-width: 150px;
+        padding: 0;
+        box-shadow: none;
+
+        .uk-nav-divider {
+            margin: 0;
+            border-bottom: 4px solid darken($lines, 65%);
+        }
+
+        .uk-navbar-dropdown-nav > li {
+            background-color: $menu-bg;
+            border-top: 1px solid darken($lines, 65%);
+
+            &:first-child { border-top: 0 }
+            &:last-child { border-radius: 0 0 5px 5px }
+
+            &:focus,
+            &:hover {
+                background-color: $button;
+                margin-top: 0;
+
+                > a { color: hsla(0,0%,100%,.9); }
+            }
+
+            > a {
+                color: #FFF;
+                line-height: normal;
+                padding: .75em 1em;
+            }
+        }
+    }
+
+    .uk-navbar-toggle {
+        display: flex;
+        gap: 10px;
+        color: hsla(0,0%,100%,.9);
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        .uk-navbar-toggle-icon > svg {
+            position: relative;
+            top: 0.25rem;
+
+            rect {
+                position: absolute;
+                fill: #FFF;
+            }
+
+            rect:nth-child(1) {
+                y: 6;
+            }
+
+            rect:nth-child(2) {
+                y: 0;
+            }
+
+
+            rect:nth-child(3) {
+                y: 12;
+                width: 15px;
+            }
+        }
+    }
+
+}
