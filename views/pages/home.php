@@ -1,7 +1,5 @@
 <main id="main" class="main" role="main">
 
-test...
-
 <section class="uk-section" data-module="comments-module">
     <div class="uk-container uk-container-expand">
 
