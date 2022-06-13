@@ -17,18 +17,6 @@
       "oAP" : "\/404.php",
       "oF" : 0
     },
-    "\/build\/editor\/wp-acf-editor-min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/build\/editor\/wp-acf-editor-min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/build\/editor\/wp-acf-editor.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -36,9 +24,9 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/build\/editor\/wp-acf-editor-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/build\/javascript\/router.js" : {
@@ -295,6 +283,25 @@
       "oA" : 0,
       "oAP" : "\/index.php",
       "oF" : 0
+    },
+    "\/README.md" : {
+      "cB" : 0,
+      "cS" : 0,
+      "eF" : 1,
+      "eL" : 1,
+      "ema" : 1,
+      "eSQ" : 1,
+      "ft" : 4096,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0,
+      "oFM" : 0,
+      "oS" : 0,
+      "pHT" : 0,
+      "pME" : 1,
+      "rFN" : 0,
+      "uCM" : 0
     },
     "\/resources\/images\/icon-call_nasassets.png" : {
       "ft" : 32768,

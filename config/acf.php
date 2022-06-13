@@ -5,7 +5,7 @@
 
 //* ACF Hooks
 add_action('acf/init', function() {
-
+    acf_update_setting('google_api_key', $_ENV['ACF_GOOGLEMAP']);
 });
 
 //* ACF Override UI
@@ -20,6 +20,7 @@ add_action('acf/input/admin_head', function() {
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
 
 //* ACF Options
+/*
 if ( function_exists( 'acf_add_options_page' ) ) :
 
     acf_add_options_page([
@@ -79,7 +80,5 @@ if ( function_exists( 'acf_add_options_page' ) ) :
             'parent_slug' => 'theme-modules'
         ]);
 
-
-
-
 endif;
+*/
