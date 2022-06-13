@@ -1,5 +1,7 @@
 <main id="main" class="main" role="main">
 
+<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Iste a dolores non amet. Voluptates, nobis iure natus obcaecati harum commodi ullam maiores unde nostrum, molestias aut nam minus autem dolor.</p>
+
 <section class="uk-section" data-module="comments-module">
     <div class="uk-container uk-container-expand">
 
