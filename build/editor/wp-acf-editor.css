@@ -1,4 +1,4 @@
-.acf-field .acf-label {
+/*.acf-field .acf-label {
     margin: 0;
 }
 .acf-field .acf-label label {
@@ -180,7 +180,7 @@
     font-size: 14px;
     font-weight: 300;
     color: #888;
-}
+}*/
 
 /*.acf-field-acfe-column .acf-field {
     float: none;
@@ -194,7 +194,7 @@
 }
 */
 
-.acf-field-acfe-column .acf-field-text,
+/*.acf-field-acfe-column .acf-field-text,
 .acf-field-acfe-column .acf-field-select,
 .acf-field-acfe-column .acf-field-email {
     padding: 5px 12px;
@@ -238,4 +238,50 @@ select[name=action] {
 
 .ac-table-actions .ac-table-button .dashicons {
     line-height: 28px !important;
+}*/
+
+.acf-input input[type="text"],
+.acf-input select {
+    width: 100% !important;
+    max-width: 25em !important;
 }
+
+.acf-postbox .acf-field-message.acf-field-62ae21088994d::before,
+.acf-postbox .acf-field-message.acf-field-62ae21088994d .acf-label {
+    display: none;
+}
+
+.acf-postbox .acf-field-message.acf-field-62ae21088994d .acf-input {
+    width: 100%;
+}
+
+
+#your-profile .acf-column-1 h2:nth-child(9),
+#your-profile .acf-column-1 table:nth-child(10) {
+    display: none !important;
+}
+
+#your-profile .acf-column-1 h2:nth-child(14),
+#your-profile .acf-column-1 table:nth-child(15) {
+    display: none !important;
+}
+
+#createuser .acf-column-1 table:nth-child(7),
+#your-profile .acf-column-1 table:nth-child(8) {
+    margin-bottom: 0 !important;
+}
+
+#createuser .acf-column-1 table:nth-child(10),
+#your-profile .acf-column-1 table:nth-child(11) {
+    margin-top: 0 !important;
+}
+
+
+/*
+#your-profile .acf-column-1 table:nth-child(8) {
+    margin-bottom: 0 !important;
+}
+
+#your-profile .acf-column-1 table:nth-child(11) {
+    margin-top: 0 !important;
+}*/

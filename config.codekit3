@@ -9,6 +9,14 @@
   ],
   "creatorBuild" : "34365",
   "files" : {
+    "\/-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/-ondemand.php",
+      "oF" : 0
+    },
     "\/404.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -205,6 +213,111 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/build\/scss\/ondemand-copy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/ondemand-copy.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/ondemand.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand\/dashboard.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/resources\/styles\/dashboard.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand\/login.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/resources\/styles\/login.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand\/profile.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/resources\/styles\/profile.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand\/property.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/resources\/styles\/property.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/build\/scss\/ondemand\/reset.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/resources\/styles\/reset.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/build\/scss\/options\/news.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -252,6 +365,14 @@
       "oAP" : "\/config\/theme.php",
       "oF" : 0
     },
+    "\/footer-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/footer-ondemand.php",
+      "oF" : 0
+    },
     "\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -266,6 +387,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/functions.php",
+      "oF" : 0
+    },
+    "\/header-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/header-ondemand.php",
       "oF" : 0
     },
     "\/header.php" : {
@@ -394,11 +523,24 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/resources\/images\/logo-nasassets.png" : {
+    "\/resources\/images\/logo-nasassets_x1.png" : {
+      "ft" : 32768,
+      "iS" : 13530,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/logo-nasassets_x1.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/logo-nasassets_x2.png" : {
       "ft" : 32768,
       "iS" : 11109,
       "oA" : 0,
-      "oAP" : "\/resources\/images\/logo-nasassets.png",
+      "oAP" : "\/resources\/images\/logo-nasassets_x2.png",
       "oF" : 0,
       "oIPL" : 1,
       "opt" : 1,
@@ -406,6 +548,56 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
+    },
+    "\/resources\/images\/ondemand\/img-investment-waygate.png" : {
+      "ft" : 32768,
+      "iS" : 219867,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/ondemand\/img-investment-waygate.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/ondemand\/nasis-logo.png" : {
+      "ft" : 32768,
+      "iS" : 12359,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/ondemand\/nasis-logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/ondemand\/pdf.png" : {
+      "ft" : 32768,
+      "iS" : 474,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/ondemand\/pdf.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/scripts\/acf-map.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/resources\/scripts\/acf-map.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/resources\/scripts\/route\/common.js" : {
       "bF" : 0,
@@ -450,6 +642,30 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/resources\/styles\/main-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/resources\/styles\/ondemand.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/ondemand-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/resources\/styles\/overview.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/overview-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -531,6 +747,22 @@
       "oAP" : "\/views\/attributes\/noscript.php",
       "oF" : 0
     },
+    "\/views\/fragments\/footer-ondemand-copy.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/fragments\/footer-ondemand-copy.php",
+      "oF" : 0
+    },
+    "\/views\/fragments\/footer-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/fragments\/footer-ondemand.php",
+      "oF" : 0
+    },
     "\/views\/fragments\/footer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -547,6 +779,22 @@
       "oAP" : "\/views\/fragments\/header.php",
       "oF" : 0
     },
+    "\/views\/fragments\/menu-ondemand-copy.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/fragments\/menu-ondemand-copy.php",
+      "oF" : 0
+    },
+    "\/views\/fragments\/menu-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/fragments\/menu-ondemand.php",
+      "oF" : 0
+    },
     "\/views\/fragments\/menu.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -561,6 +809,118 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/fragments\/mobile.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/contact.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/dashboard.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/dashboard.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/login.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/login.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/logout.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/logout.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/profile.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/profile.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/property.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/property.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand-copy\/reset.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand-copy\/reset.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/contact.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/contact.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/dashboard.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/dashboard.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/login.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/login.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/logout.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/logout.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/profile.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/profile.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/property.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/property.php",
+      "oF" : 0
+    },
+    "\/views\/ondemand\/reset.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/ondemand\/reset.php",
       "oF" : 0
     },
     "\/views\/options\/news.php" : {
@@ -659,6 +1019,14 @@
       "oAP" : "\/views\/pages\/news.php",
       "oF" : 0
     },
+    "\/views\/pages\/ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/pages\/ondemand.php",
+      "oF" : 0
+    },
     "\/views\/pages\/outreach.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -689,6 +1057,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/pages\/team.php",
+      "oF" : 0
+    },
+    "\/views\/singles\/property-ondemand.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/singles\/property-ondemand.php",
       "oF" : 0
     }
   },

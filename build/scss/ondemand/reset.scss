@@ -1,0 +1,128 @@
+#wppb-recover-password {
+    background-color: rgba(#000,.9);
+    padding: 2em;
+    border-radius: 2px;
+
+    * {
+        @include proxima_regular();
+        font-size: 1rem;
+        font-style: normal !important;
+    }
+
+    p {
+        line-height: 1.2;
+        margin-block: 0;
+    }
+
+    ul {
+        position: relative;
+        margin-block: .75em;
+    }
+
+    li.wppb-username-email {
+        padding: 0;
+
+        label {
+            padding-right: 10px !important;
+        }
+
+        input {
+            height: 35px !important;
+            padding: 6px 12px !important;
+            border-radius: 2px !important;
+        }
+    }
+
+    input[type=submit] {
+        background-color: $button;
+        color: hsla(0,0%,100%,.9);
+        text-align: center;
+        text-transform: uppercase;
+        line-height: normal !important;
+        padding: .5em 2em !important;
+        border-radius: 2px;
+        border: 0;
+
+        &:focus,
+        &:hover {
+            background-color: darken($button, 5%);
+            color: hsla(0,0%,100%,1);
+        }
+    }
+}
+
+#wppb-recover-password-container {
+
+    .wppb-success {
+        background-color: rgba(#000,.9);
+        text-align: center;
+        margin: 0;
+        padding: 2em;
+        border: 0;
+        border-radius: 2px;
+    }
+
+    //
+
+    form {
+
+        ul {
+            position: relative;
+            margin-block: .75em;
+        }
+
+        li {
+            padding: 0;
+        }
+
+        input {
+            float: none;
+            height: 35px !important;
+            padding: 6px 12px !important;
+            border-radius: 2px !important;
+        }
+
+        .wppb-description-delimiter {
+            display: block;
+            @include proxima_regular();
+            font-size: 0.875rem;
+            color: #FFF !important;
+            margin: .75em 0 0;
+
+            br {
+                content: '';
+                display: inline-block;
+                width: 0;
+            }
+        }
+
+        #pass-strength-result {
+            // background-color: #888;
+            color: rgba(#000,.9);
+            height: auto;
+            margin: 0 0 .75em;
+            padding: .25em;
+            border: 0;
+            border-radius: 2px;
+        }
+
+        input[type=submit] {
+            background-color: $button;
+            color: hsla(0,0%,100%,.9);
+            text-align: center;
+            text-transform: uppercase;
+            line-height: normal !important;
+            height: auto !important;
+            padding: .5em 2em !important;
+            border-radius: 2px;
+            border: 0;
+
+            &:focus,
+            &:hover {
+                background-color: darken($button, 5%);
+                color: hsla(0,0%,100%,1);
+            }
+        }
+
+    }
+}

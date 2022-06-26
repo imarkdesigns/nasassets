@@ -31,23 +31,23 @@ add_action('wp_enqueue_scripts', function() {
         # Enqueue Styles for Page
         switch ( $post->ID ) {
 
-            case '11': // About
-            case '13': // Team
-            case '15': // Success Stories
-            case '17': // Client Comments
-            case '19': // Loan Maturity Solutions
-            case '21': // FAQs
-            case '23': // Outreach
-            case '25': // Asset Management
-            case '27': // Property Management
-            case '29': // News
-            case '31': // Map
+            case '9': // About
+            case '12': // Team
+            case '14': // Success Stories
+            case '16': // Client Comments
+            case '18': // Loan Maturity Solutions
+            case '20': // FAQs
+            case '22': // Outreach
+            case '24': // Asset Management
+            case '26': // Property Management
+            case '28': // News
+            case '30': // Map
                 $pageName = 'overview';
                 break;
 
             case '2' : // Home
-            case '33': // Contact
-            case '35': // Sitemap
+            case '32': // Contact
+            case '34': // Sitemap
                 $pageName = 'main';
                 break;
 
@@ -55,14 +55,25 @@ add_action('wp_enqueue_scripts', function() {
                 $pageName = 'legal'; 
                 break;
 
+            // OnDemand
+            case '36': // OnDemand
+            case '38': // Dashboard
+            case '40': // Profile
+            case '42': // Property
+            case '45': // Contact
+            case '47': // Password Reset
+                $pageName = 'ondemand';
+                break;
+
         }
         wp_enqueue_style( 'page', _css.$pageName.'.css' );
 
     }
 
-    elseif ( is_singular() ) {
-        
-        
+    elseif ( is_singular( 'nas-ondemand' ) ) {
+        wp_enqueue_style( 'post', _css.'ondemand.css' );
+        wp_enqueue_script( 'od-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDnDmQQIMBE8mrPS7K83PMnEZaAad-cEjM', null, null, true );
+        wp_enqueue_script( 'od-js', _js.'acf-map.js', ['jquery'], null, true );
     }
 
 }, 100);    

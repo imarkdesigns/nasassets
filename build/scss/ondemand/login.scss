@@ -1,0 +1,128 @@
+.uk-overlay-primary {
+    background-color: rgba(#000,.25);
+}
+
+.uk-overlay figure {
+    img {
+        display: block;
+        object-fit: contain;
+        max-width: 100%;
+        height: 34px;
+        margin: 0 auto 5px;
+    }
+
+    figcaption h1 {
+        @include proxima_black();
+        font-size: 2.625rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+
+        span {
+            color: $highlight-txt;
+        }
+    }
+
+    figcaption h2 {
+        @include proxima_semibold();
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+    }
+}
+
+
+.wppb-user-forms {
+    * {
+        @include proxima_regular();
+        font-size: 1rem;
+        font-style: normal !important;
+    }
+
+    form {
+        background-color: rgba(#000,.9);
+        padding: 2em;
+        border-radius: 2px;
+    }
+
+    form p {
+        position: relative;
+        margin-bottom: .75em !important;
+        padding-bottom: 0 !important;
+
+        label {
+            padding-right: 10px !important;
+        }
+
+        input {
+            height: 35px !important;
+            padding: 6px 12px !important;
+            border-radius: 2px !important;
+        }
+
+        &.login-remember {
+            display: none !important;
+        }
+
+        .wppb-toggle-pw {
+            top: 0 !important;
+            height: 34px !important;
+        }
+    }
+
+    form .login-submit {
+        margin-bottom: 0 !important;
+        
+        input[type=submit] {
+            background-color: $button;
+            color: hsla(0,0%,100%,.9);
+            text-align: center;
+            text-transform: uppercase;
+            line-height: normal !important;
+            width: 50%;
+            // height: auto !important;
+            padding: 0 2em !important;
+            border-radius: 2px;
+            border: 0;
+
+            &:focus,
+            &:hover {
+                background-color: darken($button, 5%);
+                color: hsla(0,0%,100%,1);
+            }
+        }
+    }
+}
+
+// Errors
+.wppb-error {
+    background-color: rgba($dangered,.9) !important;
+    @include proxima_regular();
+    font-size: 0.875rem;
+    color: #FFF !important;
+    margin-bottom: 2px !important;
+    padding: .75em !important;
+    border: 0 !important;
+    border-radius: 2px;
+
+    a {
+        font-weight: 600;
+        color: rgba(#FFF,.9) !important;
+        text-decoration: underline;
+    }
+}
+
+// Forgot Password
+.login-register-lost-password {
+    background-color: rgba(#000,.9);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2px !important;
+    padding: 1em !important;
+    border-radius: 2px;
+
+    a {
+        font-size: 0.75rem !important;
+    }
+}

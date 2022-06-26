@@ -1,0 +1,272 @@
+.uk-alert {
+    color: rgba(#FAA05C,1);
+}
+
+.featured-image {
+    .uk-cover-container {
+        border-radius: 2px;
+    
+        canvas {
+            min-height: 360px;
+        }
+    }
+
+    .uk-overlay {
+        padding: 0;
+    }
+
+    .uk-overlay .contact-person {
+        background-color: rgba(#000,.7);
+        min-width: 250px;
+        max-width: 300px;
+        border-radius: 2px;
+        backdrop-filter: saturate(180%) blur(20px);
+        
+        //
+
+        .uk-card-body {
+            gap: 15px;
+
+            border: 1px solid rgba(#FFF,.25);
+            border-width: 1px 0;
+        }
+
+        .uk-card-body img {
+            object-fit: cover;
+            @include size(48px);
+        }
+
+        .uk-card-body .uk-card-title {
+            font-size: 1.125rem;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .uk-card-body .uk-text-meta {
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+
+        // 
+
+        .uk-card-footer {
+            margin-top: 0;
+            padding: 0;
+
+            > div { 
+                text-align: center;
+                padding: .5em 1em;
+
+                &:last-child {
+                    border-left: 1px solid rgba(#FFF,.25);
+                }
+            }
+
+            a { padding: 0 }
+        }
+    }
+}
+
+.property-details {
+    width: auto;
+    padding: 1em;
+
+    .pd-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+    
+        min-height: 400px;
+        strong { display: block }
+    }
+
+    .pd-info {
+        flex: 1 1 calc( 50% - 15px );
+    }
+
+    .pd-additional-photos {
+        flex: 0 1 100%;
+        align-self: stretch;
+        height: 100%;
+
+        .uk-slideshow-items li {
+            border-radius: 2px;
+        }
+    }
+
+    @media only screen and ( min-width: 1440px ) {
+        .pd-additional-photos {
+            flex: 0 1 calc( 50% - 15px );
+        }
+    }
+}
+
+.property-map {
+    .acf-map {
+        @include size(100%, 400px);
+        border: 1px solid hsla(0,0%,0%,.5);
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    // Fixes potential theme css conflict.
+    .acf-map img {
+       max-width: inherit !important;
+    }    
+}
+
+.file-management {
+    .uk-overflow-auto {
+        background-color: rgba(#FFF,1);
+    }
+
+    // Accordion
+    .uk-accordion .uk-accordion-title {
+        font-size: 1rem;
+
+        &::before {
+            float: left;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'/%3E%3C/svg%3E");
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+
+    .uk-accordion .uk-accordion-content ul:not(.uk-accordion) {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+
+            position: relative;
+            width: 100%;
+
+            &::before {
+                content: '';
+                flex: 1 0 24px;
+                display: inline-block;
+                background-image: url(#{$img}/ondemand/pdf.png);
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position: left center;
+                @include size(24px);
+                max-width: 24px;
+            }
+        }
+
+        li a {
+            color: rgba(#000,.7);
+            text-decoration: none;
+            line-height: 1.2;
+            width: auto;
+
+            &:focus,
+            &:hover {
+                color: rgba(#000,1)
+            }
+        }
+
+        @media only screen and ( min-width: 640px ) {
+            li {
+                width: calc( 50% - 20px );
+            }
+        }
+
+        @media only screen and ( min-width: 960px ) {
+            li {
+                width: 90%;
+            }
+        }
+    }
+
+    .uk-accordion .uk-accordion {
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+
+    .uk-accordion > li {
+        margin-top: 10px !important;
+        padding: .25em;
+
+        &:first-child {
+            margin-top: 0 !important;
+        }
+    }
+
+    .uk-accordion li .uk-accordion li:first-child {
+        margin-top: 0 !important;
+    }
+
+    //
+    .nas-investments .nasis-property,
+    .nas-investments .nasis-brochure {
+        padding: 1em;
+    }
+
+    .nas-investments .nasis-property .uk-overlay-primary {
+        background-color: rgba(#000,.5);
+    }
+
+    .nas-investments .nasis-brochure {
+        margin-top: -2em;
+    }
+
+    // Animate the Folder - Year-end Tax Packages
+    // @keyframes alertFade {
+    //       0% { background-color: rgba($warning,   0) }
+    //      25% { background-color: rgba($warning, .25) }
+    //      50% { background-color: rgba($warning, .50) }
+    //      75% { background-color: rgba($warning, .25) }
+    //     100% { background-color: rgba($warning,   0) }
+    // }
+
+    // @keyframes alertOut {
+    //       0% { background-color: rgba($warning, .25) }
+    //     100% { background-color: rgba($warning,   0) }
+    // }
+    // #year-end-tax-packages.uk-alert-folder {
+    //     animation: alertFade 700ms linear;
+    //     // animation-iteration-count: 3;
+    //     background-color: rgba($warning, .25);
+
+    //     &.uk-open {
+    //         animation: alertOut 500ms linear;
+    //         background-color: rgba($warning, 0);
+    //     }
+    // }
+
+}
+
+// Available Investments
+.nasis-available-investments {
+    background-image: url('//placem.at/places?w=1280&h=720&txt=0&random=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 1em;
+
+    figure {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        height: 250px;
+        background-color: hsla(0,0%,0%,.45);
+        padding: 0 1em;
+        backdrop-filter: saturate(180%) blur(10px);
+    }
+
+    .uk-button-primary {
+        font-size: 0.75rem;
+    }
+}

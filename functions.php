@@ -28,21 +28,27 @@ unset($config);
 //! Global Definitions
 //!
 
-define ( '_uri',    __( get_template_directory_uri() ) );
-define ( '_css',    _uri.'/resources/styles/' );
-define ( '_js',     _uri.'/resources/scripts/' );
-define ( '_ui',     _uri.'/resources/uikit/' );
+define ( '_uri', __( get_template_directory_uri() ) );
+define ( '_css', _uri.'/resources/styles/' );
+define ( '_js', _uri.'/resources/scripts/' );
+define ( '_ui', _uri.'/resources/uikit/' );
 
-define ( '_page',   'views/pages/' );
+define ( '_page', 'views/pages/' );
 define ( '_single', 'views/singles/' );
-define ( '_terms',  'views/taxonomies/' );
+define ( '_terms', 'views/taxonomies/' );
 
-define ( '_nav',    'views/fragments/menu' );
-define ( '_hdr',    'views/fragments/header' );
-define ( '_ftr',    'views/fragments/footer' );
-define ( '_mob',    'views/fragments/mobile' );
-define ( '_opt',    'views/options/' );
+define ( '_nav', 'views/fragments/menu' );
+define ( '_hdr', 'views/fragments/header' );
+define ( '_ftr', 'views/fragments/footer' );
+define ( '_mob', 'views/fragments/mobile' );
+define ( '_opt', 'views/options/' );
 
-define ( '_noie',   'views/attributes/edge' );
-define ( '_nojs',   'views/attributes/noscript' );
-define ( '_kuki',   'views/attributes/cookie' );
+define ( '_noie', 'views/attributes/edge' );
+define ( '_nojs', 'views/attributes/noscript' );
+define ( '_kuki', 'views/attributes/cookie' );
+
+define ( '_ondemand', 'views/ondemand/' );
+
+define ( '_od_nav', 'views/fragments/menu-ondemand' );
+define ( '_od_hdr', 'views/fragments/header-ondemand' );
+define ( '_od_ftr', 'views/fragments/footer-ondemand' );

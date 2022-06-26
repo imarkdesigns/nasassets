@@ -8,22 +8,22 @@
 
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav uk-visible@l">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Client Login</a></li>
+                <li><a href="<?php echo home_url(); ?>">Home</a></li>
+                <li><a href="<?php echo esc_url( get_permalink( 36 ) ); ?>">Client Login</a></li>
                 <li>
                     <a href="#">About NAS</a>
                     <div class="uk-navbar-dropdown" uk-dropdown="mode: click; offset: 1">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">About NAS</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Success Stories</a></li>
-                            <li><a href="#">Client Comments</a></li>
-                            <li><a href="#">Loan Maturity Solutions</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Company Video</a></li>
-                            <li><a href="#">Outreach</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 9 ) ); ?>">About NAS</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 12 ) ); ?>">Our Team</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 14 ) ); ?>">Success Stories</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 16 ) ); ?>">Client Comments</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 18 ) ); ?>">Loan Maturity Solutions</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 20 ) ); ?>">FAQs</a></li>
+                            <li><a href="#modal">Company Video</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 22 ) ); ?>">Outreach</a></li>
                             <li class="uk-nav-divider"></li>
-                            <li><a href="#">Download Brochure</a></li>
+                            <li><a href="#modal">Download Brochure</a></li>
                         </ul>
                     </div>
                 </li>
@@ -31,27 +31,27 @@
                     <a href="#">Asset Management</a>
                     <div class="uk-navbar-dropdown" uk-dropdown="mode: click; offset: 1">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">Office</a></li>
-                            <li><a href="#">Retail</a></li>
-                            <li><a href="#">Multifamily</a></li>
-                            <li><a href="#">Industrial Flex</a></li>
-                            <li><a href="#">Student Housing</a></li>
-                            <li><a href="#">Senior Assisted Living</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . '#office' ); ?>">Office</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . 'retail' ); ?>">Retail</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . 'multifamily' ); ?>">Multifamily</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . 'industrial-flex' ); ?>">Industrial Flex</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . 'student-housing' ); ?>">Student Housing</a></li>
+                            <li><a href="<?php echo esc_url( get_permalink( 24 ) . 'senior-assisted-living' ); ?>">Senior Assisted Living</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Property Management</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Map</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo esc_url( get_permalink( 26 ) ); ?>">Property Management</a></li>
+                <li><a href="<?php echo esc_url( get_permalink( 28 ) ); ?>">News</a></li>
+                <li><a href="<?php echo esc_url( get_permalink( 30 ) ); ?>">Map</a></li>
+                <li><a href="<?php echo esc_url( get_permalink( 32 ) ); ?>">Contact</a></li>
                 <li>
                     <a href="#">NASIS</a>
                     <div class="uk-navbar-dropdown" uk-dropdown="mode: click; offset: 1">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a href="#">NAS Investment Solutions</a></li>
-                            <li><a href="#">Available Investments</a></li>
-                            <li><a href="#">Webinars</a></li>
-                            <li><a href="#">Refer A Friend</a></li>
+                            <li><a href="<?php echo esc_url( '//nasinvestmentsolutions.com/' ); ?>">NAS Investment Solutions</a></li>
+                            <li><a href="<?php echo esc_url( '//nasinvestmentsolutions.com/available-investments' ); ?>">Available Investments</a></li>
+                            <li><a href="<?php echo esc_url( '//nasinvestmentsolutions.com/webinar' ); ?>">Webinars</a></li>
+                            <li><a href="<?php echo esc_url( '//nasinvestmentsolutions.com/referral-program' ); ?>">Refer A Friend</a></li>
                         </ul>
                     </div>
                 </li>

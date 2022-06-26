@@ -3,7 +3,7 @@
     inset: 0;
 
     .uk-logo {
-        background-image: url(#{$img}/logo-nasassets.png);
+        background-image: url(#{$img}/logo-nasassets_x2.png);
         background-repeat: no-repeat;
         background-position: left center;
         background-size: auto 35px;
@@ -120,3 +120,231 @@
     }
 
 }
+
+[data-ondemand="menu"] {
+    position: relative;
+
+    .uk-navbar-container {
+        background-color: $navbar;
+
+        *:not(.uk-navbar-dropdown):not(.uk-navbar-dropdown *) {
+            @include proxima_regular();
+            font-size: 0.875rem;
+            color: rgba(#FFF,.9);
+            text-transform: none;
+            text-decoration: none;
+            height: 80px;
+            min-height: 1%;
+        }
+    }
+
+    // Profile Builder Log Out Link
+    p.wppb-front-end-logout {
+        position: relative;
+        height: 100%;
+        margin: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: calc( 50% - 12px );
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23A7ABB4' d='M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E%0A");
+            @include size(24px);
+            transform: translateX(-30px);
+        }
+
+        span {
+            display: none;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: rgba(#A7ABB4,.9) !important;
+            text-decoration: none;
+            transition: 300ms ease-out;
+
+            &:focus,
+            &:hover {
+                color: lighten(#A7ABB4,15%) !important;
+            }
+        }
+    }
+
+    // Logo
+    .uk-logo {
+        background-image: url(#{$img}/logo-nasassets_x2.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 35px;
+        outline-offset: -7px;
+        white-space: nowrap;
+        @include size(160px, 80px);
+        @include hideText();
+        margin-left: 15px !important;
+        padding: 0;
+    }
+
+    .uk-subnav {
+        li > a {
+            color: hsla(0,0%,100%,.9) !important;
+
+            &:focus,
+            &:hover {
+                color: $highlight-txt !important;
+            }
+        }
+
+        li.uk-active > a {
+            color: $highlight-txt !important;
+        }
+    }
+
+    .uk-navbar-dropdown {
+        left: auto !important;
+        right: 0;
+        background-color: transparent;
+        min-width: 150px;
+        padding: 0;
+        box-shadow: none;
+
+        .uk-nav-divider {
+            margin: 0;
+            border-bottom: 4px solid darken($lines,45%);
+        }
+
+        &-nav > li {
+            background-color: rgba(#000,.95);
+            text-align: right;
+            border-top: 1px solid darken($lines,45%);
+
+            &:first-child { border-to: 0 }
+            &:last-child { border-radius: 0 0 5px 5px }
+
+            &:focus,
+            &:hover {
+                background-color: $button;
+
+                a { color: #FFF !important }
+            }
+
+            a {
+                color: #FFF !important;
+                padding: 1em;
+            }
+        }
+    }
+
+    // Search
+    .uk-search-icon {
+        font-family: $face-regular;
+
+        svg {
+            @include size(16px);
+        }
+    }
+}
+
+// OnDemand Menu - Devices
+@media only screen 
+    and ( max-device-width: 1366px )
+    and ( -webkit-min-device-pixel-ratio: 2 )
+    and ( -webkit-max-device-pixel-ratio: 5 ) {
+
+        [data-ondemand="menu"] {
+            position: relative;
+
+            .uk-navbar-container {
+                background-color: $navbar;
+
+                * {
+                    @include proxima_regular();
+                    font-size: 0.875rem;
+                    color: rgba(#FFF,.9);
+                    text-transform: none;
+                    text-decoration: none;
+                    height: 44px;
+                    min-height: 1%;
+                }
+            }
+
+            .uk-logo {
+                background-image: url(#{$img}/logo-nasassets_x1.png);
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: auto 22px;
+                outline-offset: -7px;
+                @include size(156px, 44px);
+                white-space: nowrap;
+                margin-left: 15px;
+                padding: 0;
+            }
+
+            .uk-navbar-nav li {
+                > a {
+                    color: rgba(#FFF,.9);
+
+                    &:focus,
+                    &:hover {
+                        color: $highlight-txt;
+                    }
+                }
+
+                .uk-navbar-dropdown {
+                    left: auto !important;
+                    right: 0;
+                    min-width: 150px;
+                    height: auto;
+                    padding: 0;
+                    box-shadow: none;
+                }
+
+                .uk-navbar-dropdown li {
+                    background-color: $navbar;
+                    // text-align: right;
+                    height: auto;
+                    border-top: 1px solid darken($lines, 65%);
+
+                    &:first-child { border-top: 0 }
+                    &:last-child { border-radius: 0 0 5px 5px }
+
+                    &.uk-nav-divider {
+                        margin: 0;
+                        border-bottom: 4px solid darken($lines, 45%);
+                    }
+                }
+
+                .uk-navbar-dropdown li a {
+                    color: rgba(#FFF,.9);
+                    line-height: normal;
+                    height: auto;
+                    padding: .75em 1em;
+                }
+            }
+
+            // Profile Builder Log Out Link
+            p.wppb-front-end-logout {
+                position: relative;
+                height: 100%;
+                margin: 0;
+
+                span {
+                    display: none;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: rgba(#A7ABB4,.9);
+                    text-decoration: none;
+                    transition: 300ms ease-out;
+
+                    &:focus,
+                    &:hover {
+                        color: rgba(#A7ABB4,.1);
+                    }
+                }
+            }
+        }
+
+    }

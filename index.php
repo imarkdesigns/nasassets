@@ -4,19 +4,19 @@
     switch ( $post->ID ) {
 
         // Pages
-        case '11': $pageName = 'about'; break;
-        case '13': $pageName = 'team'; break;
-        case '15': $pageName = 'stories'; break;
-        case '17': $pageName = 'comments'; break;
-        case '19': $pageName = 'loan'; break;
-        case '21': $pageName = 'faqs'; break;
-        case '23': $pageName = 'outreach'; break;
-        case '25': $pageName = 'asset'; break;
-        case '27': $pageName = 'property'; break;
-        case '29': $pageName = 'news'; break;
-        case '31': $pageName = 'map'; break;
-        case '33': $pageName = 'contact'; break;
-        case '35': $pageName = 'sitemap'; break;
+        case '9': $pageName = 'about'; break;
+        case '12': $pageName = 'team'; break;
+        case '14': $pageName = 'stories'; break;
+        case '16': $pageName = 'comments'; break;
+        case '18': $pageName = 'loan'; break;
+        case '20': $pageName = 'faqs'; break;
+        case '22': $pageName = 'outreach'; break;
+        case '24': $pageName = 'asset'; break;
+        case '26': $pageName = 'property'; break;
+        case '28': $pageName = 'news'; break;
+        case '30': $pageName = 'map'; break;
+        case '32': $pageName = 'contact'; break;
+        case '34': $pageName = 'sitemap'; break;
 
         // Legal
         case '3': $pageName = 'legal'; break;

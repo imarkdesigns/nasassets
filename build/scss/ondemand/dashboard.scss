@@ -1,0 +1,81 @@
+.my-properties {
+    // background-color: rgba(pink,.15);
+}
+
+.top-news,
+.file-management {
+    // background-color: rgba(green,.05);
+    border-left: 0;
+
+    @media only screen and ( min-width: 960px ) {
+        border-left: 1px solid var( --clr-flex-border );
+    }
+}
+
+// List Wrapper
+.mp-list,
+.tn-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+
+    list-style: none;
+    padding: 0;
+
+    .uk-card {
+        gap: 20px;
+
+        .uk-cover-container {
+            height: 180px;
+            border-radius: 2px;
+        }
+
+        img {
+            border-radius: 2px;
+        }
+    }
+
+    .uk-card-body {
+        padding: 0;
+
+        .title {
+            @include proxima_regular();
+            font-size: 1.125rem;
+            margin: 0;
+        }
+
+        .description {
+            font-size: 0.875rem;
+            color: rgba(#77787C,1);
+            line-height: 1.4;
+            margin: 5px 0 10px;
+
+            p { margin: 0 }
+        }
+
+        .taxonomy {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            gap: 5px;
+
+            list-style: none;
+            color: rgba(#A2A4A9,1);
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and ( min-width: 640px ) {
+
+    .mp-list .uk-card .uk-cover-container,
+    .tn-list .uk-card .uk-cover-container {
+        @include size(120px, 100px);
+    }
+
+    .tn-list .featured-news .uk-cover-container {
+        @include size(45%, 180px);
+    }
+
+}

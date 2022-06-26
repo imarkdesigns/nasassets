@@ -48,10 +48,23 @@
         color: hsla(0,0%,100%,.9);
     }
 
+    &.uk-button-small {
+        padding: .5em 1em;
+    }
+
     &.uk-button-primary:focus,
     &.uk-button-primary:hover {
         background-color: darken($button, 5%);
         color: hsla(0,0%,100%,1);
+    }
+
+    > span {
+        position: relative;
+        top: -1.5px;
+    }
+
+    > span.uk-margin-small-right {
+        margin-right: 5px !important;
     }
 
 }
@@ -67,4 +80,10 @@
         font-size: 1.125rem;
         text-transform: uppercase;
     }
+}
+
+.uk-background-secondary,
+.uk-card-secondary,
+.uk-section-secondary {
+    background-color: hsla(260,8%,8%,1);
 }
