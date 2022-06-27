@@ -15,7 +15,6 @@ get_header( 'ondemand' );
         case '38': // dashboard
         case '40': // profile
         case '47': // password reset
-        case '49': // logout
             $pageName = 'ondemand'; 
             break;
 
