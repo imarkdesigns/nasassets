@@ -72,7 +72,7 @@ add_action('wp_enqueue_scripts', function() {
 
     elseif ( is_singular( 'nas-ondemand' ) ) {
         wp_enqueue_style( 'post', _css.'ondemand.css' );
-        wp_enqueue_script( 'od-map', 'https://maps.googleapis.com/maps/api/js?key='.$_ENV['ACF_GOOGLEMAP'].', null, null, true );
+        wp_enqueue_script( 'od-map', 'https://maps.googleapis.com/maps/api/js?key='.$_ENV['ACF_GOOGLEMAP'].'', null, null, true );
         wp_enqueue_script( 'od-js', _js.'acf-map.js', ['jquery'], null, true );
     }
 
