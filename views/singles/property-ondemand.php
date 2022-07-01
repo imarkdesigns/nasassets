@@ -26,40 +26,43 @@
                     </div>
 
                     <?php $contact = get_field( 'contact_person' );
-                    $cp = [ 'post_type' => 'nas-team', 'p' => $contact->ID ];
-                    query_posts( $cp );
 
-                    if ( $cp ) : ?>
-                    <div class="uk-overlay uk-position-small uk-position-top-right">
-                        <div class="uk-card uk-card-secondary uk-card-small | contact-person">
-                            <?php while ( have_posts() ) : the_post(); 
-                            $name      = get_field('profile_name');
-                            $pnominal  = get_field( 'profile_postnominal' );
-                            $position  = get_field( 'profile_designation' );
-                            $email     = get_field( 'profile_email' );
-                            $permalink = get_permalink(); ?>
-                            <div class="uk-card-header">
-                                <div class="uk-text-uppercase uk-text-center uk-text-small">Property Contact Person</div>
-                            </div>
+                    if ( $contact ) :
+                        $cp = [ 'post_type' => 'nas-team', 'p' => $contact->ID ];
+                        query_posts( $cp );
 
-                            <div class="uk-card-body uk-grid-collapse uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <?php $featured_image = get_post_thumbnail_id(); 
-                                    echo wp_get_attachment_image( $featured_image, [ 48, 48, true ], '', [ 'class' => 'uk-border-circle' ] ); ?>
+                        if ( $cp ) : ?>
+                        <div class="uk-overlay uk-position-small uk-position-top-right">
+                            <div class="uk-card uk-card-secondary uk-card-small | contact-person">
+                                <?php while ( have_posts() ) : the_post(); 
+                                $name      = get_field('profile_name');
+                                $pnominal  = get_field( 'profile_postnominal' );
+                                $position  = get_field( 'profile_designation' );
+                                $email     = get_field( 'profile_email' );
+                                $permalink = get_permalink(); ?>
+                                <div class="uk-card-header">
+                                    <div class="uk-text-uppercase uk-text-center uk-text-small">Property Contact Person</div>
                                 </div>
-                                <div class="uk-width-expand">
-                                    <h3 class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></h3>
-                                    <div class="uk-text-meta"><?php echo $position; ?></div>
+
+                                <div class="uk-card-body uk-grid-collapse uk-flex-middle" uk-grid>
+                                    <div class="uk-width-auto">
+                                        <?php $featured_image = get_post_thumbnail_id(); 
+                                        echo wp_get_attachment_image( $featured_image, [ 48, 48, true ], '', [ 'class' => 'uk-border-circle' ] ); ?>
+                                    </div>
+                                    <div class="uk-width-expand">
+                                        <h3 class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></h3>
+                                        <div class="uk-text-meta"><?php echo $position; ?></div>
+                                    </div>
                                 </div>
+                                <div class="uk-card-footer uk-grid-collapse uk-flex-middle uk-flex-between | cp-cta" uk-grid>
+                                    <div class="uk-width-2-3"><a href="<?php echo $permalink; ?>" class="uk-button uk-button-text uk-link-reset">Visit <?php echo $name; ?> Bio</a></div>
+                                    <div class="uk-width-1-3 uk-text-center"><a href="<?php echo get_permalink( 32 ); ?>" aria-label="Send Message" target="_blank"><span uk-icon="icon: mail"></span></a></div>
+                                </div>
+                                <?php endwhile; wp_reset_query(); ?>
                             </div>
-                            <div class="uk-card-footer uk-grid-collapse uk-flex-middle uk-flex-between | cp-cta" uk-grid>
-                                <div class="uk-width-2-3"><a href="<?php echo $permalink; ?>" class="uk-button uk-button-text uk-link-reset">Visit <?php echo $name; ?> Bio</a></div>
-                                <div class="uk-width-1-3 uk-text-center"><a href="<?php echo get_permalink( 32 ); ?>" aria-label="Send Message" target="_blank"><span uk-icon="icon: mail"></span></a></div>
-                            </div>
-                            <?php endwhile; wp_reset_query(); ?>
                         </div>
-                    </div>
-                    <?php endif; ?>
+                        <?php endif;
+                    endif; ?>
                 </section>
 
                 <section class="uk-section uk-section-secondary uk-section-xsmall | property-details">
