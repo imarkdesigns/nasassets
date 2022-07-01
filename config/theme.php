@@ -54,3 +54,8 @@ add_action('after_setup_theme', function() {
 if ( ! isset( $content_width ) ) {
     $content_width = 1280;
 }
+
+// Add overrides to ACF Custom Fields
+add_action( 'admin_enqueue_scripts', function() {
+    wp_enqueue_script( 'handle', _uri . '/build/editor/wp-acf-script.js' );
+} );

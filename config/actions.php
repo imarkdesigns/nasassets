@@ -198,14 +198,3 @@ function my_prefix_customize_app_password_availability( $available, $user) {
 }
 add_filter('wp_is_application_passwords_available_for_user', 'my_prefix_customize_app_password_availability', 10, 2);
 add_filter( 'wp_is_application_passwords_available', '__return_false' ); // set __return_true to activate back
-
-
-/**
-* Add globally the wp-editor to WP Admin
-*
-*/
-add_action('admin_head', 'my_custom_fonts');
-
-function my_custom_fonts() {
-  echo '<link rel="stylesheet" href="'.get_template_directory_uri().'/build/editor/wp-acf-editor.css">';
-}

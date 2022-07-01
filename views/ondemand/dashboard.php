@@ -102,7 +102,7 @@
                         </div>
                         <div class="uk-card-body">
                             <figure class="uk-position-relative uk-margin-small-bottom">
-                                <img src="<?php echo _uri.'/resources/images/ondemand/img-investment-waygate.png'; ?>" alt="Waygate">
+                                <img src="//www.nasinvestmentsolutions.com/wp-content/uploads/2022/03/Waygate-Header-photo-1920-x-900.jpg" alt="Waygate">
                                 <div class="uk-overlay-primary uk-position-cover"></div>
                                 <figcaption class="uk-position-small uk-position-top">
                                     Waygate Technologies Increasing Above Market Cash-On-Cash Returns

@@ -25,64 +25,67 @@
                         </aside>
                     </div>
 
+                    <?php $contact = get_field( 'contact_person' );
+                    $cp = [ 'post_type' => 'nas-team', 'p' => $contact->ID ];
+                    query_posts( $cp );
+
+                    if ( $cp ) : ?>
                     <div class="uk-overlay uk-position-small uk-position-top-right">
                         <div class="uk-card uk-card-secondary uk-card-small | contact-person">
+                            <?php while ( have_posts() ) : the_post(); 
+                            $name      = get_field('profile_name');
+                            $pnominal  = get_field( 'profile_postnominal' );
+                            $position  = get_field( 'profile_designation' );
+                            $email     = get_field( 'profile_email' );
+                            $permalink = get_permalink(); ?>
                             <div class="uk-card-header">
                                 <div class="uk-text-uppercase uk-text-center uk-text-small">Property Contact Person</div>
                             </div>
+
                             <div class="uk-card-body uk-grid-collapse uk-flex-middle" uk-grid>
                                 <div class="uk-width-auto">
-                                    <img class="uk-border-circle" width="48" height="48" src="//www.nasassets.com/uploads/2016/01/shirlee-j-kingsley_executive.jpg" alt="Contact Person">
+                                    <?php $featured_image = get_post_thumbnail_id(); 
+                                    echo wp_get_attachment_image( $featured_image, [ 48, 48, true ], '', [ 'class' => 'uk-border-circle' ] ); ?>
                                 </div>
                                 <div class="uk-width-expand">
-                                    <h3 class="uk-card-title">Shirlee J. Kingsley, <span class="uk-display-inline-block uk-text-small">CPM</span></h3>
-                                    <div class="uk-text-meta">Vice President</div>
+                                    <h3 class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></h3>
+                                    <div class="uk-text-meta"><?php echo $position; ?></div>
                                 </div>
                             </div>
                             <div class="uk-card-footer uk-grid-collapse uk-flex-middle uk-flex-between | cp-cta" uk-grid>
-                                <div class="uk-width-2-3"><a href="#" class="uk-button uk-button-text uk-link-reset">Visit Adi Peery Bio</a></div>
-                                <div class="uk-width-1-3 uk-text-center"><a href="#" aria-label="Send Message"><span uk-icon="icon: mail"></span></a></div>
+                                <div class="uk-width-2-3"><a href="<?php echo $permalink; ?>" class="uk-button uk-button-text uk-link-reset">Visit <?php echo $name; ?> Bio</a></div>
+                                <div class="uk-width-1-3 uk-text-center"><a href="<?php echo get_permalink( 32 ); ?>" aria-label="Send Message" target="_blank"><span uk-icon="icon: mail"></span></a></div>
                             </div>
+                            <?php endwhile; wp_reset_query(); ?>
                         </div>
                     </div>
+                    <?php endif; ?>
                 </section>
 
                 <section class="uk-section uk-section-secondary uk-section-xsmall | property-details">
                     <div class="pd-wrapper">
                         <div class="pd-info">
                             <address>
-                                <p><strong>Address:</strong> 2200 SE 28th Street, Bentonville, AR</p>
+                                <p><strong>Address:</strong> 
+                                <?php $address = get_field( 'property_address' );
+                                echo $address['street'] .', '. $address['city'].', '.$address['state']; ?></p>
                             </address>
                             <article>
                                 <strong>Property Details:</strong>
-                                2200 Bentonville is a newly constructed, two-story 30,829 square foot Class “A” office building. The property is located at 2200 SE 28th Street in Bentonville, Arkansas. The property is 100% leased and occupied by one tenant, The Clorox Sales Company. The property was strategically constructed 3.5 miles from the Walmart corporate headquarters and ½ mile from the Sam’s Club corporate headquarters. Bentonville is centrally located in Benton county with Rogers county adjacent to the east.
+                                <?php $description = get_field( 'property_description' );
+                                echo $description; ?>
                             </article>
                         </div>
+                        <?php
+                        $additional_photos = get_field( 'property_additional_photos' );
+                        if ( $additional_photos ) : ?>
                         <div class="pd-additional-photos">
                             <div class="uk-position-relative uk-light" tabindex="-1" uk-slideshow="min-height:400">
 
                                 <ul class="uk-slideshow-items">
-                                    <li>
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=510" alt="" uk-cover>
-                                        <div hidden class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                            <h3 class="uk-margin-remove">Bottom</h3>
-                                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=112" alt="" uk-cover>
-                                        <div hidden class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                            <h3 class="uk-margin-remove">Bottom</h3>
-                                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=114" alt="" uk-cover>
-                                        <div hidden class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-                                            <h3 class="uk-margin-remove">Bottom</h3>
-                                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div>
-                                    </li>
+                                    <?php foreach ( $$additional_photos as $photo ) : ?>
+                                    <li> <?php echo wp_get_attachment_image( $photo['id'], 'medium', '', [ 'uk-cover' => '' ] ); ?> </li>
+                                    <?php endforeach; ?>
                                 </ul>
 
                                 <a class="uk-position-center-left uk-position-small uk-hidden-hover" aria-label="Previous" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
@@ -90,6 +93,7 @@
 
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </section>
 
@@ -212,4 +216,12 @@
         </div>
     </div>
 </main>
+
+<!-- This is the modal -->
+<div id="send-message" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
+        <h2 class="uk-modal-title">Contact Person - <?php echo $name; ?></h2>
+        <button class="uk-modal-close" type="button"></button>
+    </div>
+</div>
 <?php get_footer( 'ondemand' );

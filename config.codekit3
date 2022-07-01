@@ -45,6 +45,17 @@
       "oF" : 1,
       "pg" : 0
     },
+    "\/build\/editor\/wp-acf-script.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/resources\/scripts\/wp-acf-script.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
     "\/build\/javascript\/router.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -53,7 +64,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/router.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/build\/scss\/common\/fonts.scss" : {
@@ -216,21 +227,6 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/resources\/styles\/main.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/build\/scss\/ondemand-copy.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/resources\/styles\/ondemand-copy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -604,7 +600,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/acf-map.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/resources\/scripts\/route\/common.js" : {
@@ -615,7 +611,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/common.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/resources\/scripts\/router.js" : {
@@ -626,7 +622,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/router.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/resources\/styles\/fragments.css" : {
@@ -685,7 +681,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/uikit-icons.min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/resources\/uikit\/uikit.min.css" : {
@@ -708,7 +704,7 @@
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/uikit.min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/single.php" : {
@@ -755,14 +751,6 @@
       "oAP" : "\/views\/attributes\/noscript.php",
       "oF" : 0
     },
-    "\/views\/fragments\/footer-ondemand-copy.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/fragments\/footer-ondemand-copy.php",
-      "oF" : 0
-    },
     "\/views\/fragments\/footer-ondemand.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -787,14 +775,6 @@
       "oAP" : "\/views\/fragments\/header.php",
       "oF" : 0
     },
-    "\/views\/fragments\/menu-ondemand-copy.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/fragments\/menu-ondemand-copy.php",
-      "oF" : 0
-    },
     "\/views\/fragments\/menu-ondemand.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -817,62 +797,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/fragments\/mobile.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/contact.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/contact.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/dashboard.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/dashboard.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/login.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/login.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/logout.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/logout.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/profile.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/profile.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/property.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/property.php",
-      "oF" : 0
-    },
-    "\/views\/ondemand-copy\/reset.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/ondemand-copy\/reset.php",
       "oF" : 0
     },
     "\/views\/ondemand\/contact.php" : {
@@ -2418,7 +2342,7 @@
       "bundleFormat" : 0,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 3,
+      "syntaxCheckerStyle" : 0,
       "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {

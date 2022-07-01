@@ -241,9 +241,27 @@ select[name=action] {
 }*/
 
 .acf-input input[type="text"],
+.acf-input input[type="number"],
+.acf-input input[type="email"],
+.acf-input input[type="tel"],
+.acf-input input[type="url"],
 .acf-input select {
     width: 100% !important;
     max-width: 25em !important;
+}
+
+[data-name="wrapper"] .acf-input input[type="text"],
+[data-name="wrapper"] .acf-input input[type="number"],
+[data-name="min_size"] .acf-input input[type="text"],
+[data-type="group"] .acf-input input[type="text"],
+[data-type="group"] .acf-input input[type="number"],
+[data-type="group"] .acf-input input[type="email"],
+[data-type="group"] .acf-input input[type="tel"],
+[data-type="group"] .acf-input input[type="url"],
+[data-type="group"] .acf-input select,
+.acf-table select {
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .acf-postbox .acf-field-message.acf-field-62ae21088994d::before,
