@@ -33,6 +33,10 @@
         img {
             border-radius: 2px;
         }
+
+        .featured-news .uk-cover-container {
+            @include size(100%, 180px);
+        }
     }
 
     .uk-card-body {

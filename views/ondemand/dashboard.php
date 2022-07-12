@@ -6,36 +6,7 @@
                 <div class="uk-width-1-2@m | my-properties">
                     <hgroup> <h1>My Properties</h1> </hgroup>
                     <div uk-overflow-auto>
-                        <?php 
-                        $userID = get_current_user_id();
-                        $properties = get_field( 'client_properties', 'user_' . $userID );
-
-                        if ( $properties ) : ?>
-                        <ul class="mp-list">
-                            <?php foreach ( $properties as $post ) : setup_postdata($post); ?>
-                            <li class="mp-item">
-                                <div class="uk-card uk-grid-collapse" uk-grid>
-                                    <div class="uk-card-media-left uk-cover-container uk-width-auto">
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=4<?php echo $post->ID; ?>" alt="<?php echo get_the_title(); ?>" uk-cover>
-                                        <canvas width="640" height="360"></canvas>
-                                    </div>
-                                    <div class="uk-width-expand">
-                                        <div class="uk-card-body">
-                                            <h2 class="title"><?php the_title(); ?></h2>
-                                            <div class="description"><?php echo custom_field_excerpt( get_field( 'property_description' ), 20 ); ?></div>
-                                            <ul class="uk-text-small | taxonomy">
-                                                <?php $term_cat = get_the_terms( $post->ID, 'ondemand-categories' ); ?>
-                                                <li>Category: <?php echo $term_cat[0]->name; ?></li>
-                                                <li><a href="<?php echo get_permalink() ?>" class="od-cta">Click to see Documents</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php endforeach;
-                            wp_reset_postdata(); ?>
-                        </ul>
-                        <?php endif; ?>
+                        <?php do_action( 'property_lists' ); ?>
                     </div>
                 </div>
                 <!-- // -->
@@ -43,41 +14,8 @@
                     <hgroup> <h2>NAS Top News</h2> </hgroup>
                     <div uk-overflow-auto>
                         <ul class="tn-list">
-                            <?php for ( $n=0;$n<2;$n++ ) : ?>
-                            <li class="tn-item">
-                                <div class="uk-card uk-grid-collapse | featured-news" uk-grid>
-                                    <div class="uk-card-media-left uk-cover-container uk-width-1-2">
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=3<?=$n?>" alt="" uk-cover>
-                                        <canvas width="640" height="360"></canvas>
-                                    </div>
-                                    <div class="uk-width-1-2">
-                                        <div class="uk-card-body">
-                                            <h2 class="title">NAS Delivers Multiple Buyer Options for Texas Multifamily Property</h2>
-                                            <div class="description">NAS has successfully delivered a buyer for Kings Cove, a Class “A” 192-unit, garden-style apartment community located about 28 miles northeast of downtown Houston in the Kingwood, TX submarket.</div>
-                                            <a href="#" class="uk-text-small | od-cta">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php endfor;
-
-                            for ( $n=0;$n<5;$n++ ) : ?>
-                            <li class="tn-item">
-                                <div class="uk-card uk-grid-collapse" uk-grid>
-                                    <div class="uk-card-media-left uk-cover-container uk-width-auto">
-                                        <img src="//placem.at/places?w=640&h=360&txt=0&random=3<?=$n?>" alt="" uk-cover>
-                                        <canvas width="640" height="360"></canvas>
-                                    </div>
-                                    <div class="uk-width-expand">
-                                        <div class="uk-card-body">
-                                            <h2 class="title">NAS Delivers Multiple Buyer Options for Texas Multifamily Property</h2>
-                                            <div class="description">NAS has successfully delivered a buyer for Kings Cove, a Class “A” 192-unit, garden-style apartment community located about 28 miles northeast of downtown Houston in the Kingwood, TX submarket.</div>
-                                            <a href="#" class="uk-text-small | od-cta">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php endfor; ?>
+                            <?php do_action( 'news_sticky' ); ?>
+                            <?php //do_action( 'news_lists' ); ?>
                         </ul>
                     </div>
                 </div>

@@ -11,6 +11,10 @@ $fn_config = [
     'config/assets.php',
     'config/theme.php',
     
+    // OnDemand
+    'config/ondemand/news.php',
+    'config/ondemand/properties.php',
+
 ];
 foreach ( $fn_config as $config ) {
     

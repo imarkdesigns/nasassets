@@ -17,16 +17,21 @@
 
                 <section class="uk-section uk-section-xsmall uk-position-relative uk-padding-remove-top | featured-image">
                     <div class="uk-cover-container">
-                        <img src="//placem.at/places?w=2560&h=1140&txt=0&random=10" width="1280" height="570" alt="Featured Image" uk-cover>
-                        <canvas width="1280" height="570"></canvas>
+                        <?php if ( has_post_thumbnail() ) {
+                            $featuredID = get_post_thumbnail_id();
+                            echo wp_get_attachment_image( $featuredID, 'large', '', [ 'uk-cover' => '' ] );
+                            echo '<canvas width="1280" height="570"></canvas>';
+                        } else {
+                            echo '<div class="thumb-placeholder tp-medium"></div>';
+                        } ?>                        
 
                         <aside class="uk-panel uk-hidden@m">
                             <a href="#property-documents" class="uk-button uk-button-secondary uk-width-1-1" uk-scroll> <span uk-icon="icon: folder" class="uk-margin-small-right"></span> See Documents</a>
                         </aside>
                     </div>
 
-                    <?php $contact = get_field( 'contact_person' );
-
+                    <?php $contact = get_field( 'property_contact_person' );
+       
                     if ( $contact ) :
                         $cp = [ 'post_type' => 'nas-team', 'p' => $contact->ID ];
                         query_posts( $cp );
@@ -47,7 +52,7 @@
                                 <div class="uk-card-body uk-grid-collapse uk-flex-middle" uk-grid>
                                     <div class="uk-width-auto">
                                         <?php $featured_image = get_post_thumbnail_id(); 
-                                        echo wp_get_attachment_image( $featured_image, [ 48, 48, true ], '', [ 'class' => 'uk-border-circle' ] ); ?>
+                                        echo wp_get_attachment_image( $featured_image, 'thumbnail', '', [ 'class' => 'uk-border-circle' ] ); ?>
                                     </div>
                                     <div class="uk-width-expand">
                                         <h3 class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></h3>
@@ -86,7 +91,7 @@
                             <div class="uk-position-relative uk-light" tabindex="-1" uk-slideshow="min-height:400">
 
                                 <ul class="uk-slideshow-items">
-                                    <?php foreach ( $$additional_photos as $photo ) : ?>
+                                    <?php foreach ( $additional_photos as $photo ) : ?>
                                     <li> <?php echo wp_get_attachment_image( $photo['id'], 'medium', '', [ 'uk-cover' => '' ] ); ?> </li>
                                     <?php endforeach; ?>
                                 </ul>

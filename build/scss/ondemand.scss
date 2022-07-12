@@ -14,6 +14,32 @@
     --clr-flex-border: #D3D5D9;
 }
 
+// Thumbnails
+.thumb-placeholder {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // object-fit: cover;
+    @include size(100%);
+
+    &.tp-small {
+        background-image: url(#{$img}/img-placeholder-640x360.jpg);
+    }
+
+    &.tp-medium {
+        background-image: url(#{$img}/img-placeholder-640x360.jpg);
+    }
+
+    @media only screen and ( min-width: 960px ) {
+
+        &.tp-small {
+            background-image: url(#{$img}/img-placeholder-300x300.jpg);
+        }
+
+    }
+}
+
 @media only screen 
     and ( max-device-width: 1366px )
     and ( -webkit-min-device-pixel-ratio: 2 )

@@ -9,6 +9,19 @@
   ],
   "creatorBuild" : "34365",
   "files" : {
+    "\/_temp\/pexels-rodnae-productions-8783604.jpg" : {
+      "ft" : 16384,
+      "iS" : 287614,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/_temp\/pexels-rodnae-productions-8783604.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/-ondemand.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -361,6 +374,22 @@
       "oAP" : "\/config\/assets.php",
       "oF" : 0
     },
+    "\/config\/ondemand\/news.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/ondemand\/news.php",
+      "oF" : 0
+    },
+    "\/config\/ondemand\/properties.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/ondemand\/properties.php",
+      "oF" : 0
+    },
     "\/config\/theme.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -501,6 +530,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/resources\/images\/img-placeholder-300x300.jpg" : {
+      "ft" : 16384,
+      "iS" : 87421,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/img-placeholder-300x300.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/img-placeholder-640x360.jpg" : {
+      "ft" : 16384,
+      "iS" : 199790,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/img-placeholder-640x360.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/resources\/images\/img-transIE.png" : {
       "ft" : 32768,
       "iS" : 75,
@@ -621,6 +676,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/resources\/scripts\/router.js",
+      "oF" : 0,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/resources\/scripts\/wp-acf-script.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/resources\/scripts\/wp-acf-script.js",
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
