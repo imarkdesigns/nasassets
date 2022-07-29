@@ -1,6 +1,7 @@
 [data-globals="menu"] {
-    position: relative;
-    inset: 0;
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 1001;
 
     .uk-logo {
         background-image: url(#{$img}/logo-nasassets_x2.png);
@@ -23,7 +24,7 @@
     }
 
     .uk-navbar {
-        background-color: $menu-bg;
+        background: rgba(#000,.8);
         height: 80px;
 
         .uk-navbar-left {

@@ -55,10 +55,19 @@
             padding-right: 10px !important;
         }
 
-        input {
+        input[type="text"],
+        input[type="password"] {
+            width: 100% !important;
             height: 35px !important;
             padding: 6px 12px !important;
             border-radius: 2px !important;
+            box-shadow: none;
+        }
+
+        input[type="submit"] {
+            height: 35px !important;
+            padding: 6px 12px !important;
+            border-radius: 2px !important;            
         }
 
         &.login-remember {

@@ -38,7 +38,7 @@ add_action('after_setup_theme', function() {
     // add_editor_style( $editor_stylesheet_path );
 
     //* Additional Size
-    // add_image_size( 'guides-img', 80, 80, [ 'center', 'center' ] );
+    add_image_size( 'cp-thumb', 45, 45, [ 'center', 'center' ] ); // Contact Person Thumbnail
     // add_image_size( 'news-img', 80, 80, [ 'center', 'center' ] );
 
     //* Menu

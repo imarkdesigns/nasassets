@@ -39,7 +39,10 @@
                         if ( $cp ) : ?>
                         <div class="uk-overlay uk-position-small uk-position-top-right">
                             <div class="uk-card uk-card-secondary uk-card-small | contact-person">
-                                <?php while ( have_posts() ) : the_post(); 
+                                <?php while ( have_posts() ) : the_post();
+                                // Hide user ID into md5
+                                $cid = md5($cp['p']);
+
                                 $name      = get_field('profile_name');
                                 $pnominal  = get_field( 'profile_postnominal' );
                                 $position  = get_field( 'profile_designation' );
@@ -55,13 +58,13 @@
                                         echo wp_get_attachment_image( $featured_image, 'thumbnail', '', [ 'class' => 'uk-border-circle' ] ); ?>
                                     </div>
                                     <div class="uk-width-expand">
-                                        <h3 class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></h3>
+                                        <div class="uk-card-title"><?php echo $name; ?><?php echo ( $pnominal ) ? ', <span class="uk-display-inline-block uk-text-small">'.$pnominal.'</span>' : ''; ?></div>
                                         <div class="uk-text-meta"><?php echo $position; ?></div>
                                     </div>
                                 </div>
                                 <div class="uk-card-footer uk-grid-collapse uk-flex-middle uk-flex-between | cp-cta" uk-grid>
-                                    <div class="uk-width-2-3"><a href="<?php echo $permalink; ?>" class="uk-button uk-button-text uk-link-reset">Visit <?php echo $name; ?> Bio</a></div>
-                                    <div class="uk-width-1-3 uk-text-center"><a href="<?php echo get_permalink( 32 ); ?>" aria-label="Send Message" target="_blank"><span uk-icon="icon: mail"></span></a></div>
+                                    <div class="uk-width-2-3"><a href="<?php echo $permalink; ?>" class="uk-button uk-button-text uk-link-reset" target="_blank">Visit <?php echo $name; ?> Bio</a></div>
+                                    <div class="uk-width-1-3 uk-text-center"><a href="<?php echo get_permalink( 32 ).'?cid='.$cid; ?>" uk-tooltip="title: Send Message; pos: bottom" aria-label="Send Message" target="_blank"><span uk-icon="icon: mail"></span></a></div>
                                 </div>
                                 <?php endwhile; wp_reset_query(); ?>
                             </div>
@@ -69,6 +72,26 @@
                         <?php endif;
                     endif; ?>
                 </section>
+
+                <section class="uk-section" hidden>
+                    <?php // $files = get_field('folder_lists'); 
+
+                        while( have_rows('folder_lists') ) : the_row();
+
+                            $sub_value = get_sub_field('document_file');
+
+                            // var_dump($sub_value);
+
+                            $pdf = count($sub_value);
+                            for ( $n=0; $n<$pdf; $n++ ) {
+
+                                echo $sub_value[$n]['title'] . '<br>';
+                            }
+
+                        endwhile;
+                    ?>
+                </section>
+
 
                 <section class="uk-section uk-section-secondary uk-section-xsmall | property-details">
                     <div class="pd-wrapper">
@@ -180,42 +203,54 @@
             </div>
             <!-- End Overflow -->
             <div class="uk-panel | nasis-available-investments">
+            <?php
+                $extURL   = get_field( 'nasis_url', 'option' );
+                $btnLabel = get_field( 'nasis_btn_label', 'option' ); ?>
+
                 <figure class="uk-margin-remove">
                     <img src="<?php echo _uri.'/resources/images/ondemand/nasis-logo.png'; ?>" width="200" height="50" alt="">
-                    <a href="#" class="uk-button uk-button-primary">View More Available Investments</a>
+                    <a href="<?php echo esc_url( $extURL ); ?>" class="uk-button uk-button-primary" target="_blank"> <?php echo esc_html( $btnLabel ); ?> </a>
                 </figure>
             </div>
 
             <div class="uk-panel | nas-investments">
+            <?php
+                $dstContent = get_field( 'dst_content', 'option' );
+                $dstPhoto   = get_field( 'dst_photo', 'option' );
+                $dstURL     = get_field( 'dst_url', 'option' );
+                $dstLabel   = get_field( 'dst_btn_label', 'option' ); ?>
                 <div class="nasis-property">
                     <div class="uk-card uk-card-secondary uk-card-small">
                         <div class="uk-card-header">
                             <img src="<?php echo _uri.'/resources/images/ondemand/nasis-logo.png'; ?>" width="100" height="25" alt="NASIS Logo">
-                            <h3>Available dst properties fractional interests starting at $100K</h3>
-                            <p>Quality DST properties underwritten by the NASIS team. 1031 Exchange Eligible, Dependable Closings, Self-Directed IRA Qualified</p>
+                            <?php echo $dstContent; ?>
                         </div>
                         <div class="uk-card-body">
                             <figure class="uk-position-relative uk-margin-small-bottom">
-                                <img src="//www.nasinvestmentsolutions.com/wp-content/uploads/2022/03/Waygate-Header-photo-1920-x-900.jpg" alt="Waygate">
+                                <?php echo wp_get_attachment_image( $dstPhoto['id'], 'full' ); ?>
                                 <div class="uk-overlay-primary uk-position-cover"></div>
                                 <figcaption class="uk-position-small uk-position-top">
-                                    Waygate Technologies Increasing Above Market Cash-On-Cash Returns
+                                    <?php echo $dstPhoto['caption']; ?>
                                 </figcaption>
                             </figure>
-                            <a href="#" class="uk-button uk-button-primary" target="_blank">Learn More</a>
+                            <a href="<?php echo esc_url( $dstURL ); ?>" class="uk-button uk-button-primary" target="_blank"><?php echo esc_html( $dstLabel ); ?></a>
                         </div>
                     </div>
                 </div>
                 <div class="nasis-brochure">
+                <?php 
+                    $brochure = get_field( 'pdf_brochure_file', 'option' );
+                    $pbTitle = get_field( 'pb_title', 'option' );
+                    $pbLabel = get_field( 'pb_btn_label', 'option' ); ?>
                     <div class="uk-card uk-card-small uk-grid-collapse" uk-grid>
                         <div class="uk-card-media-left uk-width-1-1 uk-cover-container">
-                            <img src="//placem.at/things?w=70&h=90&txt=0&random=1" alt="" uk-cover>
-                            <canvas width="70" height="90"></canvas>
+                            <!-- <img src="<?php echo esc_attr($icon); ?>" alt="" uk-cover> -->
+                            <?php echo wp_get_attachment_image( $brochure['id'], [ 9999, 90, true ] ); ?>
                         </div>
                         <div class="uk-width-expand">
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.</h3>
-                                <p><a href="#">Download Free NASIS Guide Here</a></p>
+                                <h3 class="uk-card-title"><?php echo $pbTitle; ?></h3>
+                                <p><a href="<?php echo esc_url( $brochure['link'] ); ?>"><?php echo esc_html( $pbLabel ); ?></a></p>
                             </div>
                         </div>
                     </div>
@@ -224,12 +259,4 @@
         </div>
     </div>
 </main>
-
-<!-- This is the modal -->
-<div id="send-message" class="uk-flex-top" uk-modal>
-    <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
-        <h2 class="uk-modal-title">Contact Person - <?php echo $name; ?></h2>
-        <button class="uk-modal-close" type="button"></button>
-    </div>
-</div>
 <?php get_footer( 'ondemand' );

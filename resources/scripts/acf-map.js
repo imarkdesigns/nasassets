@@ -1,1 +1,138 @@
-!function($){function n(n){var a=n.find(".marker"),e={zoom:n.data("zoom")||16,mapTypeId:google.maps.MapTypeId.ROADMAP},o=new google.maps.Map(n[0],e);return o.markers=[],a.each((function(){!function(n,a){var e=n.data("lat"),o=n.data("lng"),t={lat:parseFloat(e),lng:parseFloat(o)},r=new google.maps.Marker({position:t,map:a});if(a.markers.push(r),n.html()){var i=new google.maps.InfoWindow({content:n.html()});google.maps.event.addListener(r,"click",(function(){i.open(a,r)}))}}($(this),o)})),function(n){var a=new google.maps.LatLngBounds;n.markers.forEach((function(n){a.extend({lat:n.position.lat(),lng:n.position.lng()})})),1==n.markers.length?n.setCenter(a.getCenter()):n.fitBounds(a)}(o),o}$(document).ready((function(){$(".acf-map").each((function(){n($(this))}))}))}(jQuery);
+(function( $ ) {
+
+/**
+ * initMap
+ *
+ * Renders a Google Map onto the selected jQuery element
+ *
+ * @date    22/10/19
+ * @since   5.8.6
+ *
+ * @param   jQuery $el The jQuery element.
+ * @return  object The map instance.
+ */
+function initMap( $el ) {
+
+    // Find marker elements within map.
+    var $markers = $el.find('.marker');
+
+    // Create gerenic map.
+    var mapArgs = {
+        zoom        : $el.data('zoom') || 16,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl: true,
+        mapTypeId   : google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map( $el[0], mapArgs );
+
+    // Add markers.
+    map.markers = [];
+    $markers.each(function(){
+        initMarker( $(this), map );
+    });
+
+    // Center map based on markers.
+    centerMap( map );
+
+    // Return map instance.
+    return map;
+}
+
+/**
+ * initMarker
+ *
+ * Creates a marker for the given jQuery element and map.
+ *
+ * @date    22/10/19
+ * @since   5.8.6
+ *
+ * @param   jQuery $el The jQuery element.
+ * @param   object The map instance.
+ * @return  object The marker instance.
+ */
+function initMarker( $marker, map ) {
+
+    // Get position from marker.
+    var lat = $marker.data('lat');
+    var lng = $marker.data('lng');
+    var latLng = {
+        lat: parseFloat( lat ),
+        lng: parseFloat( lng )
+    };
+
+    var relpath  = location.origin + '/wp-content/themes/nasassets/resources/images/markers/';
+    var pin      = 'nas-gmap-marker-51@2x.png';
+    var mapIcon = relpath + pin;
+    // console.log(relpath);
+
+    var image = {
+        url : mapIcon,
+        scaledSize: new google.maps.Size(52, 52)
+    }
+
+    // Create marker instance.
+    var marker = new google.maps.Marker({
+        position : latLng,
+        map: map,
+        icon: image,
+    });
+
+    // Append to reference for later use.
+    map.markers.push( marker );
+
+    // If marker contains HTML, add it to an infoWindow.
+    if( $marker.html() ){
+
+        // Create info window.
+        var infowindow = new google.maps.InfoWindow({
+            content: $marker.html()
+        });
+
+        // Show info window when marker is clicked.
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open( map, marker );
+        });
+    }
+}
+
+/**
+ * centerMap
+ *
+ * Centers the map showing all markers in view.
+ *
+ * @date    22/10/19
+ * @since   5.8.6
+ *
+ * @param   object The map instance.
+ * @return  void
+ */
+function centerMap( map ) {
+
+    // Create map boundaries from all map markers.
+    var bounds = new google.maps.LatLngBounds();
+    map.markers.forEach(function( marker ){
+        bounds.extend({
+            lat: marker.position.lat(),
+            lng: marker.position.lng()
+        });
+    });
+
+    // Case: Single marker.
+    if( map.markers.length == 1 ){
+        map.setCenter( bounds.getCenter() );
+
+    // Case: Multiple markers.
+    } else{
+        map.fitBounds( bounds );
+    }
+}
+
+// Render maps on page load.
+$(document).ready(function(){
+    $('.acf-map').each(function(){
+        var map = initMap( $(this) );
+    });
+});
+
+})(jQuery);

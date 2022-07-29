@@ -4,7 +4,8 @@
     switch ( $post->ID ) {
 
         // Pages
-        case '9': $pageName = 'about'; break;
+        case '2':  $pageName = 'home'; break;
+        case '9':  $pageName = 'about'; break;
         case '12': $pageName = 'team'; break;
         case '14': $pageName = 'stories'; break;
         case '16': $pageName = 'comments'; break;
@@ -13,7 +14,6 @@
         case '22': $pageName = 'outreach'; break;
         case '24': $pageName = 'asset'; break;
         case '26': $pageName = 'property'; break;
-        case '28': $pageName = 'news'; break;
         case '30': $pageName = 'map'; break;
         case '32': $pageName = 'contact'; break;
         case '34': $pageName = 'sitemap'; break;
@@ -22,7 +22,7 @@
         case '3': $pageName = 'legal'; break;
 
         default:
-            $pageName = 'home';
+            $pageName = 'news';
             break;
 
     }
