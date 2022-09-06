@@ -7,7 +7,7 @@
       "uuidString" : "913F57CC-A4BF-4AE8-AC28-20E68133468D"
     }
   ],
-  "creatorBuild" : "34365",
+  "creatorBuild" : "34418",
   "files" : {
     "\/-ondemand.php" : {
       "cB" : 0,
@@ -451,6 +451,19 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
+    },
+    "\/resources\/images\/bg-company-video.jpg" : {
+      "ft" : 16384,
+      "iS" : 669338,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/bg-company-video.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/resources\/images\/icon-call_nasassets.png" : {
       "ft" : 32768,
@@ -1972,7 +1985,8 @@
         "optionString" : "'event', 'fdescribe'"
       },
       "no-restricted-imports" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : ""
       },
       "no-restricted-properties" : {
         "active" : 0,
@@ -2600,6 +2614,7 @@
       "createDeclarationFile" : 0,
       "jsxMode" : 0,
       "minifierStyle" : 0,
+      "moduleDetectionType" : 0,
       "moduleResolutionType" : 0,
       "moduleType" : 2,
       "removeComments" : 0,

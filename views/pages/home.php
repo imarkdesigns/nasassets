@@ -1,6 +1,36 @@
 <main id="main" class="main" role="main">
 
-<section class="uk-section" data-module="comments-module">
+<section class="about | uk-section">
+    <div class="uk-container uk-container-large">
+        
+        <article class="uk-article uk-child-width-1-2@m uk-flex-bottom" uk-grid>
+            <div>
+                <div class="uk-panel">
+                    <h2>The NAS Brand of <br> 
+                    Investment Property Management</h2>
+                </div>
+            </div>
+            <div>
+                <div class="uk-panel">
+                    <p>Since 2008, NAS has served 2,568 investment clients and has established an impressive track record for investment property management. The track record includes generating over $595 million in cash distributions to property investors and managing a commercial real estate portfolio of 177 diverse commercial properties, comprised of 24.5 million square-feet, in 30 states. The overall value of NAS' managed portfolio in the company's 13-year history, totals over $3.305 billion.</p>
+                    <p>National Asset Services was founded on the unwavering principle of putting our clients' best interests above everything else. This is a cornerstone of building trust. NAS is an incredible team of people who strongly believe in this ethic. Good intentions are not enough, however, to achieve positive results in the real estate world on a consistent basis. It also takes a lot of hard work and a wealth of experience and expertise.</p>
+                </div>
+            </div>
+            <div class="uk-width-1-1">
+                <div class="uk-panel">
+                    <figure class="uk-position-relative">
+                        <img src="<?php echo _uri.'/resources/images/bg-company-video.jpg'; ?>" alt="">
+                        <button type="button" aria-label="Play Video"> </button>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="uk-section" data-module="comments-module" hidden>
     <div class="uk-container uk-container-expand">
 
         <div class="comments-wrapper">

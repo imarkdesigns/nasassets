@@ -36,7 +36,7 @@ function my_admin_bar_render() {
 
 //* Remove Emoji & Admin-Bar
 add_filter('emoji_svg_url', '__return_false');
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 //* Bypass ssl for api
 // add_filter('https_ssl_verify', '__return_false');
@@ -50,7 +50,7 @@ add_filter( 'protected_title_format', 'remove_protected_text' );
 //* Allow Unfiltered Uploads & Edit themes/plugins
 define('ALLOW_UNFILTERED_UPLOADS', true);
 define('DISALLOW_FILE_EDIT', true);
-define('WP_DEBUG', false);
+// define('WP_DEBUG', false);
 
 // add_action('admin_menu', function() {
 //     add_options_page( 'Discussion Settings', 'Discussion', 'manage_options', 'options-discussion.php' );

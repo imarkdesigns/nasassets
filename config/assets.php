@@ -14,7 +14,7 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script( 'uikit', _ui.'uikit.min.js', null, null, true );
     wp_enqueue_script( 'uikit-icon', _ui.'uikit-icons.min.js', null, null, true );
 
-    wp_enqueue_style( 'adobe-fonts', '//use.typekit.net/mui5cyq.css' );
+    wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/mui5cyq.css' );
     wp_enqueue_style( 'fragments', _css.'fragments.css' );
     wp_enqueue_script( 'router', _js.'router.js', ['jquery'], null, true );
         
