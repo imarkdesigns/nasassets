@@ -26,7 +26,7 @@
                         </div>
                         <img src="<?php echo _uri.'/resources/images/bg-company-video.jpg'; ?>" alt="">
                     </figure>
-                    <button type="button" aria-label="Play Video"> </button>
+                    <button type="button" aria-label="Play Video" uk-tooltip="title: Watch Video; pos: bottom;"> </button>
                 </div>
             </div>
         </div>

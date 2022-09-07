@@ -337,6 +337,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/build\/scss\/overview.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/overview.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/config\/acf.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -461,6 +476,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/bg-team-nas_hdr.png" : {
+      "ft" : 32768,
+      "iS" : 1777997,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/bg-team-nas_hdr.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

@@ -88,10 +88,33 @@
             </div>
         </div>
     </div>    
-
-
-
 </header>
+
+<?php elseif ( is_page( 12 ) ) : // Our Team ?>
+
+<header class="hero team | uk-position-relative">
+    <div class="uk-container uk-container-expand">
+
+        <div class="uk-grid-collapse uk-grid-match uk-flex-middle" uk-grid>
+            <div class="uk-width-1-2@m">
+                <figure class="uk-cover-container">
+                    <canvas width="960" height="950"></canvas>
+                    <img src="<?php echo _uri.'/resources/images/bg-team-nas_hdr.png' ?>" alt="<?php bloginfo(); ?>" uk-cover>
+                </figure>
+            </div>
+            <div class="uk-width-1-2@m uk-flex-first@m uk-flex-last">
+                <div class="uk-panel uk-padding-large">
+                    <h1><span class="uk-text-success">NAS</span> Team</h1>
+                    <p>The National Asset Services commercial real estate management team is an experienced and proven group of professionals.  The executive team works with over 90 diversely structured ownership groups including; private investors and private investor groups, beneficiaries in Delaware Statutory Trusts (DST), and co-owners in tenant-in-common properties. The company’s portfolio consists of over 80 Properties in 25 States valued at over $2 billion.</p>
+                    <p>The NAS team has been successful in delivering positive results for a wide range of diverse commercial real estate including; office, medical office, multifamily, retail, student housing, senior assisted living and industrial flex properties and offers.  The NAS executives have a wealth of experience in a wide-range of management and consulting services.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</header>
+
 
 <?php else : ?>
 <header class="hero -contact">

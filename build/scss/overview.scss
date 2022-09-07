@@ -1,0 +1,60 @@
+// Import mixins
+@import 'common/mixins',
+        'common/fonts';
+
+// Import Options
+@import 'options/news';
+
+.team {
+
+    .uk-card {
+        position: relative;
+        max-width: 414px;
+        margin-inline: auto;
+    }
+
+    figure.uk-inline img {
+        border-radius: 2px;
+    }
+
+    figcaption.uk-overlay {
+        background-color: rgba(#000,.8);
+        font-size: 1rem;
+        border-radius: 2px;
+        border: 1px solid rgba(#FFF,.20);
+        backdrop-filter: saturate(180%) blur(10px);
+
+        h2 {
+            @include bodoni();
+            font-size: clamp(1.125rem, 0.8438rem + 1.4063vw, 2.25rem);
+            color: rgba(#FFF,.9);
+            line-height: 1;
+            margin: 0;
+
+            .uk-text-meta {
+                // display: block;
+                font-family: $face-regular;
+                font-weight: 400;
+                // vertical-align: text-top;
+            }
+        }
+
+        p { margin: 0 }
+
+    }
+
+    @media ( min-width: 960px ) {
+
+        .uk-card {
+            max-width: max-content;
+        }
+
+        figcaption.uk-overlay h2 .uk-text-meta {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+
+    }
+
+
+} // End of Team

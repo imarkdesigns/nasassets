@@ -1,6 +1,5 @@
 .hero.home {
 
-
     .headings {
         max-width: 100% !important;
         bottom: 20%;
@@ -321,8 +320,44 @@
     }
     // End of Track Record
 
+}
 
+.hero.team {
 
+    .uk-container {
+        padding-inline: 0;
+    }
+
+    .uk-panel {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        @include bodoni();
+        font-size: clamp(2rem, 0.3704rem + 8.1481vw, 7.5rem);
+        line-height: .8;
+        margin: 0;
+
+        .uk-text-success {
+            color: $highlight-txt !important;
+            letter-spacing: -0.075em;
+        }
+    }
+
+    .uk-cover-container canvas {
+        max-height: 667px;
+    }
+
+    .uk-cover-container img {
+        object-fit: cover;
+    }
+
+    @media ( min-width: 960px ) {
+        .uk-cover-container canvas {
+            min-height: 834px;
+            // max-height: 950px;
+        }
+    }
 
 
 }
