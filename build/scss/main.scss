@@ -5,6 +5,105 @@
 // Import Options
 @import 'options/news';
 
+.about {
+
+    h2 {
+        @include bodoni();
+        font-size: 3rem;
+
+        .uk-text-success {
+            color: $highlight-txt !important;
+        }
+    }
+
+    .uk-panel figure {
+        position: relative;
+        margin: 0;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            @include size(101%);
+            border: 1px solid #DDD;
+            box-sizing: border-box;
+            border-radius: 2px;
+            transform: translateX(-50%) rotate(.7deg);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            @include size(101%);
+            border: 1px solid #DDD;
+            box-sizing: border-box;
+            border-radius: 2px;
+            transform: translateX(-50%) rotate(-.7deg);
+        }
+
+        img {
+            position: relative;
+            min-height: 520px;
+            border-radius: 2px;
+            object-fit: cover;
+            z-index: 1;
+        }
+    }
+
+    .uk-overlay {
+        top: calc( 50% - 25px );
+        text-align: center;
+        z-index: 2;
+
+        h3 {
+            @include bodoni();
+            font-size: 3rem;
+
+            small {
+                display: block;
+                font-family: $face-light;
+                font-size: 1.125rem;
+                font-weight: 300;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+    @media ( min-width: 640px ) {
+
+        .uk-overlay {
+            max-width: 600px;
+        }
+
+    }
+
+    .uk-panel button {
+        position: absolute;
+        bottom: -75px;
+        left: 50%;
+        display: block;
+        background-color: transparent;
+        background-image: url(#{$img}img-play-button.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include size(150px);
+        border: 0;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        cursor: pointer;
+    }
+
+}
+
+
 [data-module="comments-module"] {
     position: relative;
     padding: 0;

@@ -6,7 +6,7 @@
         <article class="uk-article uk-child-width-1-2@m uk-flex-bottom" uk-grid>
             <div>
                 <div class="uk-panel">
-                    <h2>The NAS Brand of <br> 
+                    <h2>The <span class="uk-text-success">NAS</span> Brand of <br> 
                     Investment Property Management</h2>
                 </div>
             </div>
@@ -19,9 +19,14 @@
             <div class="uk-width-1-1">
                 <div class="uk-panel">
                     <figure class="uk-position-relative">
+                        <div class="uk-overlay uk-position-center uk-light">
+                            <h3><small>COMMERCIAL REAL ESTATE MANAGEMENT</small> NAS Company Video</h3>
+                            <p>National Asset Services is a commercial real estate management company that delivers results for over 90 investment groups across America. NAS has a proven track record of managing a wide range of commercial real estate in a nationwide portfolio valued at over $3.315 billion.</p>
+                            <p>Watch the company video and hear from actual clients about what makes the NAS brand of commercial property management a service that is nationally respected and owner entrusted.</p>
+                        </div>
                         <img src="<?php echo _uri.'/resources/images/bg-company-video.jpg'; ?>" alt="">
-                        <button type="button" aria-label="Play Video"> </button>
                     </figure>
+                    <button type="button" aria-label="Play Video"> </button>
                 </div>
             </div>
         </div>
