@@ -361,3 +361,70 @@
 
 
 }
+
+.hero.profile {
+
+    .uk-cover-container {
+        canvas {
+            min-height: 568px;
+        }
+    }
+
+    .uk-overlay-primary {
+        background-color: rgba(#000,.3);
+    }
+
+    .uk-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+        .profile-headings {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center;
+            align-items: center;
+            // flex: 1 0 100%;
+            max-width: 1600px;
+            width: 100%;
+            // min-height: 320px;
+            // margin-inline: auto;
+            padding-top: 80px;
+            padding-bottom: 240px;
+            padding-inline: 15px;
+            box-sizing: border-box;
+
+            h1 {
+                @include bodoni();
+                font-size: clamp(1.5rem, 0rem + 7.5vw, 7.5rem);
+                line-height: .8;
+            }
+
+            h1 span {
+                font-size: clamp(0.875rem, 0.5313rem + 1.7188vw, 2.25rem);
+                text-transform: uppercase;
+            }
+
+            p {
+                flex: 1 0 100%;
+                font-size: clamp(1rem, 0.7813rem + 1.0938vw, 1.875rem);
+                color: $highlight-txt;
+                margin: 0;
+            }
+        }        
+    }
+
+    @media ( min-width: 960px ) {
+
+        .uk-cover-container {
+            canvas {
+                min-height: 768px;
+            }
+        }
+
+    }
+
+
+
+}

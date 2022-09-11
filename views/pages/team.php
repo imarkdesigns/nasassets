@@ -16,6 +16,7 @@ query_posts( $teamLists );
                 $designation = get_field( 'profile_designation' ); ?>
                 <div>
                     <div class="uk-card uk-padding-remove">
+                        <a href="<?php echo get_permalink(); ?>">
                         <figure class="uk-inline uk-margin-remove">
                             <?php the_post_thumbnail( 'full' ); ?>
                         </figure>
@@ -23,6 +24,7 @@ query_posts( $teamLists );
                             <h2><?php echo $name; ?><?php echo !empty($nominal) ? ', <span class="uk-text-meta">'. $nominal .'</span>' : ''; ?></h2>
                             <p><?php echo $designation; ?></p>
                         </figcaption>
+                        </a>
                     </div>
                 </div>
                 <?php endwhile; wp_reset_query(); ?>

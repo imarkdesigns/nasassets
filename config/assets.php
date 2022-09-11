@@ -76,4 +76,8 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_script( 'od-js', _js.'acf-map.js', ['jquery'], null, true );
     }
 
+    elseif ( is_singular( 'nas-team' ) ) {
+        wp_enqueue_style( 'post', _css.'overview.built.css' );
+    }
+
 }, 100);    

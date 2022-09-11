@@ -337,6 +337,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/build\/scss\/overview.built.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/overview.built.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/build\/scss\/overview.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -467,6 +482,19 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/resources\/images\/bg-bio-background.jpg" : {
+      "ft" : 16384,
+      "iS" : 95104,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/bg-bio-background.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/resources\/images\/bg-company-video.jpg" : {
       "ft" : 16384,
       "iS" : 669338,
@@ -515,6 +543,19 @@
       "oIPL" : 1,
       "opt" : 1,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/img-bio-featured-photo.jpg" : {
+      "ft" : 16384,
+      "iS" : 386295,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/img-bio-featured-photo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -804,6 +845,18 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/resources\/styles\/ondemand-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/resources\/styles\/overview.built.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/styles\/overview.built-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -1143,6 +1196,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/singles\/property-ondemand.php",
+      "oF" : 0
+    },
+    "\/views\/singles\/team-profile.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/singles\/team-profile.php",
       "oF" : 0
     }
   },

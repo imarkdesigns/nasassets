@@ -115,6 +115,31 @@
     </div>
 </header>
 
+<?php elseif ( is_singular( 'nas-team' ) ) : 
+
+$title       = get_the_title();
+$nominal     = get_field( 'profile_postnominal' );
+$designation = get_field( 'profile_designation' ); ?>
+
+<!-- <header class="hero profile | uk-position-relative" data-src="//placem.at/places?w=3840&h=1840&txt=0&random=1" uk-img> -->
+<header class="hero profile | uk-position-relative">
+    
+    <div class="uk-cover-container">
+        <canvas width="1920" height="920"></canvas>
+        <img src="//placem.at/places?w=3840&h=1840&txt=0&random=1" alt="" uk-cover>
+
+        <div class="uk-overlay-primary uk-position-cover"></div>
+        <div class="uk-overlay uk-position-cover uk-light">
+            <div class="profile-headings">
+                <h1><?php echo $title ?><?php echo !empty($nominal) ? ', <span class="uk-text-meta">'. $nominal .'</span>' : ''; ?></h1>
+                <p><?php echo $designation; ?></p>
+            </div>            
+        </div>
+    </div>
+    
+
+</header>
+
 
 <?php else : ?>
 <header class="hero -contact">
