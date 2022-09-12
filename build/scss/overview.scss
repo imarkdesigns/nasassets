@@ -58,3 +58,56 @@
 
 
 } // End of Team
+
+
+.elfsight-widget-google-maps {
+
+    .uk-panel.uk-padding-small {
+        padding: 0 !important;
+    }
+
+    div.uk-text-meta {
+        @include proxima_light();
+    }
+
+    address.uk-text-meta {
+        color: #000;
+    }
+
+
+    // Elfsight Overrides
+    .eapps-google-maps-bar-list-item-info-title {
+        @include proxima_semibold();
+        font-weight: 600;
+    }
+
+    .eapps-google-maps-marker-image img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .eapps-google-maps-marker-content {
+        padding-top: 16px;
+    }
+
+    .eapps-google-maps-marker-description {
+        margin-top: 0;
+        padding-top: 0;
+        border: 0;
+    }
+
+    .eapps-google-maps-marker .eapps-google-maps-marker-content .eapps-google-maps-marker-info {
+        display: none;
+    }
+
+    .eapps-google-maps-bar-list-item:hover {
+        background-color: rgba($button,.15);
+
+    }
+
+    .eapps-google-maps-bar-search-location {
+        display: none;
+    }
+
+
+} // End of Map Widget
