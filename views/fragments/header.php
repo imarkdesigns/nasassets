@@ -2,9 +2,30 @@
 <header class="hero home | uk-position-relative">
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade; min-height: 668;">
         <ul class="uk-slideshow-items">
-            <?php for ($at=0;$at<6;$at++) : ?>
+            <?php
+            $photos = [
+                'kings-cove.jpg',
+                'paramount-house.jpg',
+                'walgreens.jpg',
+                'apache-station.jpg',
+                'press-ganey.jpg',
+                'novanta.jpg'
+            ];
+
+            $thumb = [
+                'kings-cove-thumb.jpg',
+                'paramount-house-thumb.jpg',
+                'walgreens-thumb.jpg',
+                'apache-station-thumb.jpg',
+                'press-ganey-thumb.jpg',
+                'novanta-thumb.jpg'
+            ];
+
+            $tip = [ 'Multifamily', 'Senior Assisted Living', 'Retail', 'Student Housing', 'Office', 'Industrial' ];
+
+            for ($at=0;$at<6;$at++) : ?>
             <li>
-                <img src="//placem.at/places?w=1920&h=1100&txt=0&random=1<?=$at;?>" alt="" uk-cover>
+                <img src="<?php echo _uri.'/resources/images/header-properties/'.$photos[$at]; ?>" alt="" uk-cover>
                 <div class="description | uk-overlay uk-position-bottom-left">
                     <div>Walgreens Burbank <small>Burbank, Illinois United States</small></div>
                 </div>
@@ -15,7 +36,7 @@
         <ul class="uk-thumbnav uk-position-bottom" uk-margin>
             <?php for ($at=0;$at<6;$at++) : ?>
             <li uk-slideshow-item="<?=$at;?>" class="uk-active">
-                <a href="#" uk-tooltip="title: hello; pos: bottom;"><img src="//placem.at/places?w=1920&h=1100&txt=0&random=1<?=$at;?>" width="120" height="120" alt=""></a>
+                <a href="#" uk-tooltip="title: <?php echo $tip[$at]; ?>; pos: bottom;"><img src="<?php echo _uri.'/resources/images/header-properties/'.$thumb[$at]; ?>" width="120" height="120" alt=""></a>
             </li>
             <?php endfor; ?>
         </ul>
@@ -37,30 +58,35 @@
         <div class="record-wrapper | uk-light">
             <div class="record-item box-blue">
                 <h3>
+                    <img src="<?php echo _uri.'/resources/images/track-records/img-clients-served.png'; ?>" alt="Clients Served">
                     Client Served
                     <span class="record-value">2,568</span>
                 </h3>
             </div>
             <div class="record-item box-blue">
                 <h3>
+                    <img src="<?php echo _uri.'/resources/images/track-records/img-assets-refinanced.png'; ?>" alt="Assets Refinanced">
                     Assets Refinanced
                     <span class="record-value">21</span>
                 </h3>
             </div>
             <div class="record-item box-blue">
                 <h3>
+                    <img src="<?php echo _uri.'/resources/images/track-records/img-assets-sold.png'; ?>" alt="Assets Sold">
                     Assets Sold
                     <span class="record-value">73</span>
                 </h3>
             </div>
             <div class="record-item box-blue">
                 <h3>
+                    <img src="<?php echo _uri.'/resources/images/track-records/img-properties.png'; ?>" alt="Properties">
                     Properties
                     <span class="record-value">177</span>
                 </h3>
             </div>
             <div class="record-item box-blue">
                 <h3>
+                    <img src="<?php echo _uri.'/resources/images/track-records/img-states.png'; ?>" alt="States">
                     States
                     <span class="record-value">30</span>
                 </h3>
