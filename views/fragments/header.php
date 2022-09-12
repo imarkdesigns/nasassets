@@ -152,7 +152,7 @@ $designation = get_field( 'profile_designation' ); ?>
     
     <div class="uk-cover-container">
         <canvas width="1920" height="920"></canvas>
-        <img src="//placem.at/places?w=3840&h=1840&txt=0&random=1" alt="" uk-cover>
+        <img src="<?php echo _uri.'/resources/images/novanta-team.jpg'; ?>" alt="" uk-cover>
 
         <div class="uk-overlay-primary uk-position-cover"></div>
         <div class="uk-overlay uk-position-cover uk-light">

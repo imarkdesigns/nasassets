@@ -965,6 +965,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/resources\/images\/novanta-team.jpg" : {
+      "ft" : 16384,
+      "iS" : 252642,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/novanta-team.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/resources\/images\/ondemand\/img-investment-waygate.png" : {
       "ft" : 32768,
       "iS" : 219867,
