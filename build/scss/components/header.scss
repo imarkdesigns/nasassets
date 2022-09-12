@@ -424,7 +424,77 @@
         }
 
     }
+}
 
+.hero.map {
 
+    .uk-cover-container canvas {
+        min-height: 300px;
+
+        + img {
+            object-fit: cover;
+        }
+    }
+
+    .uk-cover-container h1 {
+        @include bodoni();
+        font-size: clamp(1.125rem, 0.2813rem + 4.2188vw, 4.5rem);
+        line-height: .8;
+    }
+
+}
+
+.hero-localnav {
+
+    .uk-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .overflow {
+        height: 50px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    h1 {
+        @include bodoni();
+        display: block;
+        font-size: 1.25rem;
+        color: #FFF;
+        text-transform: capitalize;
+        width: 300px;
+        margin-right: 60px !important;
+        @include sharpText();
+    }
+
+    h1, ul {
+        margin: 0;
+    }
+
+    .uk-subnav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        > li > a {
+            font-size: 0.875rem;
+            color: rgba(#FFF, .8);
+            text-transform: none;
+        }
+
+        > .current_page_item > a {
+            @include proxima_semibold();
+            color: rgba(#FFF, 1);
+        }
+    }
+
+    @media ( min-width: 1200px ) {
+
+        .uk-subnav {
+            justify-content: flex-end;
+            margin-right: 0;
+        }
+
+    }
 
 }

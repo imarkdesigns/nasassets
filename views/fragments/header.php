@@ -140,12 +140,52 @@ $designation = get_field( 'profile_designation' ); ?>
 
 </header>
 
+<?php elseif ( is_page([ 30 ]) ) : ?>
+
+<header class="hero map | uk-position-relative">
+
+    <div class="uk-cover-container">
+        <canvas width="1920" height="450"></canvas>
+        <img src="//placem.at/places?w=1920&h=900&txt=0&random=1" alt="" uk-cover>
+
+        <div class="uk-overlay-primary uk-position-cover"></div>
+        <div class="uk-overlay uk-position-bottom-center uk-position-medium uk-text-center uk-light">
+            <h1>NAS Managed Properties Since 2008</h1>
+        </div>
+    </div>
+
+</header>
+<nav class="hero-localnav | uk-background-secondary">
+    <div class="uk-container uk-container-expand">
+        <div class="uk-flex uk-flex-between uk-flex-middle overflow">
+
+            <div>
+                <h1>Categories</h1>
+            </div>
+            <div>
+                <ul class="uk-subnav">
+                    <li><a href="#">Office | Medical</a></li>
+                    <li><a href="#">Industrial</a></li>
+                    <li><a href="#">Multifamily</a></li>
+                    <li><a href="#">Retail</a></li>
+                    <li><a href="#">Senior Assisted Living</a></li>
+                    <li><a href="#">Student Housing</a></li>
+                    <li><a href="#">Championship Golf Course</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
 
 <?php else : ?>
-<header class="hero -contact">
+<header class="hero | uk-position-relative">
+    
     <div class="uk-cover-container">
-        <canvas width="1920" height="720"></canvas>
-        <img src="//placem.at/places?w=1920&h=600&txt=0&random=1" alt="" uk-cover>
+        <canvas width="1920" height="450"></canvas>
+        <img src="//placem.at/places?w=1920&h=900&txt=0&random=1" alt="" uk-cover>
     </div>
+
 </header>
 <?php endif; ?>
