@@ -1,4 +1,12 @@
-<section class="uk-section" data-module="stories-module">
+<?php
+if ( !is_home() ) {
+    $class = 'class="uk-section"';
+} else {
+    $class = 'class="uk-section uk-section-secondary"';
+}
+
+?>
+<section <?=$class?> data-module="stories-module">
     <div class="uk-position-relative" tabindex="-1" uk-slider="finite: true">
         <ul class="uk-slider-items uk-grid-small uk-grid">
 

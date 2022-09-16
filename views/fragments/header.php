@@ -118,14 +118,34 @@ $designation = get_field( 'profile_designation' ); ?>
     </div>
 </nav>
 
+<?php elseif ( is_home() ) : ?>
 
-<?php else : ?>
-<header class="hero | uk-position-relative">
-    
-    <div class="uk-cover-container">
-        <canvas width="1920" height="450"></canvas>
-        <img src="//placem.at/places?w=1920&h=900&txt=0&random=1" alt="" uk-cover>
+<nav class="hero-localnav | uk-background-muted">
+    <div class="uk-container uk-container-expand">
+        <div class="uk-flex uk-flex-between uk-flex-middle overflow">
+
+            <div>
+                <h1>NAS News</h1>
+            </div>
+            <div>
+                <div>
+                    <button type="button" class="uk-button uk-button-small">Popular Categories <span uk-icon="icon: chevron-down; ratio: .7"></span></button>
+                    <div class="uk-dropbar uk-dropbar-top" uk-drop="mode: click; stretch: x; target: !.hero-localnav; animation: slide-top; animate-out: true; duration: 700">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="uk-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+</nav>
 
-</header>
 <?php endif; ?>

@@ -111,3 +111,130 @@
 
 
 } // End of Map Widget
+
+
+.news-lists {
+
+    .uk-card {
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .uk-card-body {
+        padding: 2em;
+    }
+
+}
+
+.blog [data-module="stories-module"] {
+
+    // Hack the Slider Item
+    .uk-slider-items {
+        // gap: 15px;
+
+        > li:first-child {
+            display: flex;
+            align-items: flex-end;
+
+            padding-inline: 45px 30px;
+            box-sizing: border-box;
+        }
+    }
+
+    .uk-slidenav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(#000,.65);
+        color: #FFF;
+        max-width: 100%;
+        @include size(52px);
+        padding: 10px;
+        border-radius: 50%;
+
+        &.uk-slidenav-next {
+            box-shadow: -2px 0 0 0 rgba($button, 1);
+        }
+
+        &.uk-slidenav-previous {
+            box-shadow: 2px 0 0 0 rgba($button, 1);
+        }
+
+        @media ( min-width: 960px ) {
+            @include size(75px);
+        }
+    }
+
+    // .uk-grid-small > * {
+    //     padding-left: 10px;
+    // }
+
+    // .uk-slider-items > li:first-child {
+    //     display: flex;
+    //     align-items: flex-end;
+    //     width: 100%;
+    //     max-width: 770px;
+    //     height: 650px;
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    //     padding-bottom: 40px;
+    //     box-sizing: border-box;
+    // }
+
+    .uk-panel {
+        position: relative;        
+    }
+
+    .uk-inline {
+        margin: 0;
+
+        img {
+            height: 650px;
+            border-radius: 2px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .uk-overlay-primary {
+        background-color: hsla(0,0%,0%,.4);
+        background-blend-mode: multiply;
+        border-radius: 2px;
+
+        span {
+            font-size: 0.875rem;
+            color: hsla(0,0%,80%,.9);
+        }
+
+        .story-title {
+            @include bodoni();
+            font-size: 2.25rem;
+            color: hsla(0,0%,100%,.9);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media ( min-width: 640px ) {
+        // .uk-slider-items > li:first-child {
+        //     height: 700px;
+        //     padding-left: 220px;
+        // }
+
+        .uk-inline img {
+            height: 700px;
+        }
+    }
+
+    @media ( min-width: 960px ) {
+
+        .uk-slider-items > li:first-child {
+            padding-left: 200px;
+        }
+
+    }
+}

@@ -457,6 +457,18 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .uk-dropbar {
+        max-width: 1920px !important;
+        width: 100% !important;
+    }
+
+    .uk-button-small {
+        background-color: transparent;
+        font-family: .875rem;
+        text-transform: capitalize;
+        padding: 0 !important;
+    }
     
     .overflow {
         height: 50px;
@@ -468,9 +480,9 @@
         @include bodoni();
         display: block;
         font-size: 1.25rem;
-        color: #FFF;
+        // color: #FFF;
         text-transform: capitalize;
-        width: 300px;
+        max-width: 300px;
         margin-right: 60px !important;
         @include sharpText();
     }

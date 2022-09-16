@@ -8,12 +8,14 @@ $investors_phone = ( !empty(get_field( 'od_phone_primary', 'user_' . $investor_i
 
 // Get Contact Person Email
 $cpid = get_posts([ 'post_type' => 'nas-team', 'posts_per_page' => -1 ]);
-foreach($cpid as $id) {
-    if ( $_GET['cid'] != md5($id->ID) )
-        continue;
+if ( isset($_GET['cid']) ) {
+    foreach($cpid as $id) {
+        if ( $_GET['cid'] != md5($id->ID) )
+            continue;
 
-        $cid = get_field( 'profile_email', $id->ID );
-        // echo $cid;
+            $_GET['odc'] = get_field( 'profile_email', $id->ID );
+            // echo $cid;
+    }
 }
 ?>
 <main id="main" class="main" role="main">
@@ -23,11 +25,12 @@ foreach($cpid as $id) {
             <div uk-grid class="uk-child-width-1-2@m">
                 <div>
                     <div class="uk-headings">
-                        <h1>Send Us A Message</h1>
+                        <h2>We're here to help</h2>
+                        <p>Leave a message and we will get back to you.</p>
                     </div>
                 </div>
                 <div>
-                    <?php echo do_shortcode( '[wpforms id="870"]' ); ?>
+                    <?php echo do_shortcode( '[wpforms id="959"]' ); ?>
                 </div>
             </div>
         </section>

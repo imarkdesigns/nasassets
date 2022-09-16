@@ -1,7 +1,15 @@
 [nas-global="menu"] {
-    position: absolute;
-    inset: 0 0 auto 0;
+    // position: absolute;
+    // inset: 0 0 auto 0;
     z-index: 1001;
+
+    &.uk-position-relative .uk-navbar {
+        background-color: #000;
+    }
+
+    &.uk-position-top .uk-navbar {
+        background: rgba(#000,.8);
+    }
 
     .uk-logo {
         background-image: url(#{$img}/logo-nasassets_x2.png);
@@ -24,7 +32,6 @@
     // }
 
     .uk-navbar {
-        background: rgba(#000,.8);
         height: 80px;
 
         .uk-navbar-left {

@@ -41,7 +41,7 @@ $vcard   = get_field( 'profile_vcard' );
     </aside>
 
     <section id="bio" class="bio | uk-section uk-light">
-        <div class="uk-container uk-container-xlarge">
+        <div class="uk-container uk-container-large">
 
             <?php if ( !empty( get_field( 'profile_bio' ) ) ) : ?>
             <div class="uk-child-width-1-2@m uk-grid-large uk-grid-match uk-flex-middle" uk-grid>

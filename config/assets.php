@@ -80,4 +80,8 @@ add_action('wp_enqueue_scripts', function() {
         wp_enqueue_style( 'post', _css.'overview.built.css' );
     }
 
+    elseif ( is_home() ) {
+        wp_enqueue_style( 'post', _css.'overview.css' );
+    }
+
 }, 100);    

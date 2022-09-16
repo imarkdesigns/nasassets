@@ -1,5 +1,14 @@
+<?php
+// Change menu position class
+if ( !is_home() ) {
+    $class = 'class="uk-position-top"';
+} else {
+    $class = 'class="uk-position-relative"';
+}
+
+?>
 <a href="#main" id="skipToLink" class="skip-to-content-link">Skip to Content</a>
-<div nas-global="menu">
+<div <?=$class;?> nas-global="menu">
 
     <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">

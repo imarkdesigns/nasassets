@@ -7,7 +7,7 @@ query_posts( $teamLists );
 <main id="main" class="main" role="main">
 
     <section class="team | uk-section">
-        <div class="uk-container uk-container-xlarge">
+        <div class="uk-container uk-container-large">
 
             <div class="uk-child-width-1-2@s uk-child-width-1-3@l uk-grid-medium uk-grid-match" uk-grid>
                 <?php while ( have_posts() ) : the_post();
