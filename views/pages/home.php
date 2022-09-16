@@ -42,7 +42,7 @@
             <div class="uk-width-1-2@l">
                 
                 <div class="uk-position-relative">
-                    <div uk-slideshow="animation: pull; autoplay: true; max-height: 510">
+                    <div uk-slideshow="animation: pull; autoplay: true; min-height: 360; max-height: 510">
                         <div class="uk-visible-toggle uk-light" tabindex="-1">
                             <ul class="uk-slideshow-items">
                                 <?php for ( $n=0;$n<3;$n++ ) : ?>
