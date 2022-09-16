@@ -39,7 +39,8 @@ add_action('after_setup_theme', function() {
 
     //* Additional Size
     add_image_size( 'cp-thumb', 45, 45, [ 'center', 'center' ] ); // Contact Person Thumbnail
-    // add_image_size( 'news-img', 80, 80, [ 'center', 'center' ] );
+    add_image_size( 'stories-vertical-thumb', 512, 650, [ 'center', 'center' ] ); // Success Stories Thumbnail
+    add_image_size( 'news-vertical-thumb', 390, 550, [ 'center', 'center' ] ); // News Thumbnail
 
     //* Menu
     register_nav_menus([

@@ -391,6 +391,14 @@
       "oAP" : "\/config\/assets.php",
       "oF" : 0
     },
+    "\/config\/includes\/track-records.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/includes\/track-records.php",
+      "oF" : 0
+    },
     "\/config\/ondemand\/news.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1098,9 +1106,20 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/resources\/scripts\/common.js",
-      "oF" : 0,
+      "oF" : 1,
+      "sC" : 0,
+      "tS" : 0
+    },
+    "\/resources\/scripts\/route\/home.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/resources\/scripts\/home.js",
+      "oF" : 1,
       "sC" : 0,
       "tS" : 0
     },

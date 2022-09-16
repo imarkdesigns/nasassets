@@ -1,13 +1,18 @@
 .hero.home {
 
+    .uk-overlay-primary {
+        background: linear-gradient(to left, rgba(#000,.15), rgba(#000,.5));
+    }
+
     .headings {
         max-width: 100% !important;
         bottom: 20%;
+        z-index: 2;
 
         h1 {
             @include bodoni();
             // font-size: clamp(2rem, -2.1703rem + 14vw, 7.5rem);
-            font-size: 2rem;
+            font-size: 2.5rem;
             line-height: .85;
         }
 
@@ -37,6 +42,10 @@
         @media ( min-width: 640px ) {
             bottom: 22.5%;
 
+            h1 {
+                font-size: clamp(3rem, 0.625rem + 6.875vw, 7.5rem);
+            }
+
             ul { border-top-width: 4px }
         }
 
@@ -44,14 +53,6 @@
             bottom: 30%;
 
             ul { border-top-width: 5px }
-        }
-
-        @media ( min-width: 1200px ) {
-
-            h1 {
-                font-size: clamp(2rem, 0.625rem + 6.875vw, 7.5rem);
-            }
-
         }
     }
     // End of Headings
@@ -66,7 +67,7 @@
 
     .uk-slideshow-items li .description {
         bottom: 7.5%;
-        z-index: 2;
+        z-index: 5;
 
         font-size: 1rem;
         color: rgba(#FFF,.9);
@@ -116,7 +117,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            @include size(40px);
+            @include size(48px);
             padding: 2px;
             border-radius: 50%;
             box-sizing: border-box;

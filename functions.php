@@ -15,6 +15,9 @@ $fn_config = [
     'config/ondemand/news.php',
     'config/ondemand/properties.php',
 
+    // Includes
+    'config/includes/track-records.php'
+
 ];
 foreach ( $fn_config as $config ) {
     

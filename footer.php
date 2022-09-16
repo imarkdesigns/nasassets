@@ -1,6 +1,7 @@
 <?php
     
     get_template_part( _ftr );
+    get_template_part( _mob );
     wp_footer();
     
     get_template_part( _noie );

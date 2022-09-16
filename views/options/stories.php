@@ -1,8 +1,8 @@
 <section class="uk-section" data-module="stories-module">
-    <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slider="finite: true; center: true; index: 1">
-        <ul class="uk-slider-items uk-grid-small uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-grid">
+    <div class="uk-position-relative" tabindex="-1" uk-slider="finite: true">
+        <ul class="uk-slider-items uk-grid-small uk-grid">
 
-            <li>
+            <li class="uk-width-1-2@s uk-width-2-3@m uk-width-1-2@l uk-width-2-5@xl">
                 <div class="uk-panel">
                     <div class="uk-headings">
                         <h2><span>National Assets Services</span> Success Stories</h2>
@@ -40,8 +40,8 @@
                 'Ut eu quam nec erat tempor vestibulum sit amet at neque. Etiam ut urna vulputate, luctus nibh et, iaculis metus.'
             ];
 
-            for ( $n=0;$n<=5;$n++ ) : ?>                
-            <li>
+            for ( $n=1;$n<=5;$n++ ) : ?>
+            <li class="uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l uk-width-1-5@xl">
                 <figure class="uk-inline">
                     <img src="//placem.at/places?w=640&h=700&txt=0&random=30<?=$n?>" width="640" height="700" alt="">
                     <figcaption class="uk-overlay-primary uk-position-bottom uk-padding">

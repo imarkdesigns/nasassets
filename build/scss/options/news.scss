@@ -5,11 +5,68 @@
         padding-left: 10px;
     }
 
-    .uk-panel {
-        position: relative;
+    .uk-slidenav {
         display: flex;
         align-items: center;
-        height: 450px;
+        justify-content: center;
+        background-color: rgba(#000,.65);
+        color: #FFF;
+        max-width: 100%;
+        @include size(52px);
+        padding: 10px;
+        border-radius: 50%;
+
+        &.uk-slidenav-next {
+            box-shadow: -2px 0 0 0 rgba($button, 1);
+        }
+
+        &.uk-slidenav-previous {
+            box-shadow: 2px 0 0 0 rgba($button, 1);
+        }
+
+        @media ( min-width: 960px ) {
+            @include size(75px);
+        }
+    }
+
+    .uk-panel {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        h2 {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+
+            position: absolute;
+            inset: 0;
+            @include bodoni();
+            font-size: 3rem;
+            color: $highlight-txt;
+            text-transform: uppercase;
+            text-align: center;
+            width: auto;
+            transform: rotate(0deg) translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transform-style: preserve-3d;
+
+            small {
+                color: #000;
+            }
+        }
+
+        p {
+            text-align: center;
+            padding-inline: 30px;
+        }
+
+        .readmore {
+            left: calc( 50% - 60px ) ;
+        }
     }
 
     .uk-inline {
@@ -45,11 +102,32 @@
     @media ( min-width: 640px ) {
 
         .uk-panel {
-            height: 550px;
+            
+            h2 {
+                width: 550px;
+                transform: rotate(-90deg);
+            }
+
+            p { display: none }
+
+            a.readmore {
+                bottom: auto;
+                right: auto;
+                left: calc( 45px + (50% - 60px) );
+            }
+
         }
 
         .uk-inline img {
             height: 550px;
+        }
+
+    }
+
+    @media ( min-width: 960px ) {
+
+        .uk-panel h2 {
+            transform: rotate(-90deg);
         }
 
     }

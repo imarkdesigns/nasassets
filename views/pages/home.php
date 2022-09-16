@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="uk-width-1-1">
-                <div class="uk-panel">
+                <div class="uk-panel" uk-lightbox>
                     <figure class="uk-position-relative">
                         <div class="uk-overlay uk-position-center uk-light">
                             <h3><small>COMMERCIAL REAL ESTATE MANAGEMENT</small> NAS Company Video</h3>
@@ -26,7 +26,7 @@
                         </div>
                         <img src="<?php echo _uri.'/resources/images/bg-company-video.jpg'; ?>" alt="">
                     </figure>
-                    <button type="button" aria-label="Play Video" uk-tooltip="title: Watch Video; pos: bottom;"> </button>
+                    <a href="https://youtube.com/watch?v=PrKWZlkwv6w&rel=0" aria-label="Play Video" class="play-btn" uk-tooltip="title: Watch Video; pos: bottom;" data-attrs="width: 1280; height: 720;"></a>
                 </div>
             </div>
         </div>
@@ -35,36 +35,58 @@
 </section>
 
 
-<section class="uk-section" data-module="comments-module" hidden>
+<section class="uk-section" data-module="comments-module">
     <div class="uk-container uk-container-expand">
 
-        <div class="comments-wrapper">
-            <div class="uk-position-relative">
-                <div uk-slideshow="animation: pull; max-height: 510;">
-                    <div class="uk-visible-toggle uk-light" tabindex="-1">
-                        <ul class="uk-slideshow-items">
-                            <?php for ( $n=0;$n<3;$n++ ) : ?>
-                            <li><img src="//placem.at/places?=640&360&txt=0&random=2<?=$n?>" alt="" uk-cover></li>
-                            <?php endfor; ?>
-                        </ul>
+        <div class="uk-grid-large uk-flex-middle" uk-grid>
+            <div class="uk-width-1-2@l">
+                
+                <div class="uk-position-relative">
+                    <div uk-slideshow="animation: pull; autoplay: true; max-height: 510">
+                        <div class="uk-visible-toggle uk-light" tabindex="-1">
+                            <ul class="uk-slideshow-items">
+                                <?php for ( $n=0;$n<3;$n++ ) : ?>
+                                <li>
+                                    <img src="//placem.at/places?w=1280&h=510&txt=0&random=32<?=$n?>" alt="" uk-cover>
+                                    <div class="slideshow-caption | uk-overlay uk-overlay-primary uk-position-bottom uk-transition-slide-bottom">
+                                        Press Ganey National Headquarters
+                                    </div>
+                                </li>
+                                <?php endfor; ?>
+                            </ul>
+                        </div>
+                        <div class="uk-flex uk-flex-right uk-margin-small-top">                         
+                            <ul class="uk-slideshow-nav uk-dotnav"></ul>
+                        </div>
                     </div>
-                    <ul class="uk-slideshow-nav uk-dotnav"></ul>
+                    
                 </div>
+
             </div>
+            <div class="uk-width-expand@l uk-flex-first uk-flex-last@l">
 
-            <div class="uk-panel">
-                <div class="uk-headings">
-                    <h2><span>National Assets Services</span> Client Comments</h2>
+                <?php $quote = [ 'post_type' => 'nas-comments', 'posts_per_page' => 1, 'orderby' => 'rand' ];
+                query_posts( $quote ); ?>                
+                <div class="featured-comments | uk-panel">
+                    <div class="uk-headings">
+                        <span uk-icon="icon: quote-right; ratio: 5"></span>
+                        <h2><span>National Asset Services</span> Client Comments</h2>
+                    </div>
+                    <?php while ( have_posts() ) : the_post(); ?>
+                    <blockquote class="uk-margin-large-bottom">
+                        <p><?php the_field( 'cc_comment' ); ?></p>
+                        <footer>
+                            <?php the_title(); ?> <br>
+                            <?php echo get_field( 'cc_designation' ) .' | '. get_field( 'cc_location' ); ?>
+                        </footer>                        
+                    </blockquote>
+                    <?php endwhile; wp_reset_query(); ?>
+
+                    <div class="uk-text-center">
+                        <a href="#" class="uk-button uk-button-primary">Read More Client Comments</a>
+                    </div>
                 </div>
-                <blockquote>
-                    <p>The team you finally ended up with has done an OUTSTANDING job not to mention the assets that you provided. I can not go without saying that EVERYTHING you have done has more than met my expectations.</p>
-                    <footer>
-                        Don Senkeresty, San Jose, CA, <br>
-                        Investor | Pinecrest Townhomes
-                    </footer>
-                </blockquote>
 
-                <a href="#" class="uk-button uk-button-primary">Read More Client Comments</a>
             </div>
         </div>
 

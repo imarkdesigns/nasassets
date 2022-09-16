@@ -2,118 +2,33 @@
 <header class="hero home | uk-position-relative">
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade; min-height: 668;">
         <ul class="uk-slideshow-items">
-            <?php
-            $photos = [
-                'kings-cove.jpg',
-                'paramount-house.jpg',
-                'walgreens.jpg',
-                'apache-station.jpg',
-                'press-ganey.jpg',
-                'novanta.jpg'
-            ];
-
-            $thumb = [
-                'kings-cove-thumb.jpg',
-                'paramount-house-thumb.jpg',
-                'walgreens-thumb.jpg',
-                'apache-station-thumb.jpg',
-                'press-ganey-thumb.jpg',
-                'novanta-thumb.jpg'
-            ];
-
-            $tip = [ 'Multifamily', 'Senior Assisted Living', 'Retail', 'Student Housing', 'Office', 'Industrial' ];
-
-            for ($at=0;$at<6;$at++) : ?>
+            <?php $slides = get_field( 'hdr_slide' );
+            foreach ( $slides as $slide ) : ?>
             <li>
-                <img src="<?php echo _uri.'/resources/images/header-properties/'.$photos[$at]; ?>" alt="" uk-cover>
+                <?php echo wp_get_attachment_image( $slide['id'], 'full', '', [ 'uk-cover' => '' ] ); ?>
                 <div class="description | uk-overlay uk-position-bottom-left">
-                    <div>Walgreens Burbank <small>Burbank, Illinois United States</small></div>
+                    <div><?php echo $slide['title']; ?> <small><?php echo $slide['caption']; ?></small></div>
                 </div>
+                <div class="uk-overlay-primary uk-position-cover"></div>
             </li>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </ul>
 
         <ul class="uk-thumbnav uk-position-bottom" uk-margin>
-            <?php for ($at=0;$at<6;$at++) : ?>
-            <li uk-slideshow-item="<?=$at;?>" class="uk-active">
-                <a href="#" uk-tooltip="title: <?php echo $tip[$at]; ?>; pos: bottom;"><img src="<?php echo _uri.'/resources/images/header-properties/'.$thumb[$at]; ?>" width="120" height="120" alt=""></a>
+            <?php $i = 0; foreach ( $slides as $slide ) : ?>
+            <li uk-slideshow-item="<?=$i++;?>" class="uk-active">
+                <a href="#" uk-tooltip="title: <?php echo $slide['description']; ?>; pos: bottom;"><?php echo wp_get_attachment_image( $slide['id'], 'thumb' ); ?></a>
             </li>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </ul>
 
-
         <div class="headings | uk-overlay uk-position-bottom-left uk-light">
-            <h1>Nationally <span>Respected</span> <br> Owner <span>Entrusted</span></h1>
-            <ul>
-                <li>Proven Performance</li>
-                <li>Commercial Asset & Property Management</li>
-            </ul>
+            <?php the_field( 'hdr_slide_overlay' ); ?>
         </div>
-
     </div>
     <!-- End of Slide -->
 
-    <div class="track-record | uk-overlay uk-position-bottom-right">
-        <h2>Investment Property Track Record - Since 2008</h2>
-        <div class="record-wrapper | uk-light">
-            <div class="record-item box-blue">
-                <h3>
-                    <img src="<?php echo _uri.'/resources/images/track-records/img-clients-served.png'; ?>" alt="Clients Served">
-                    Client Served
-                    <span class="record-value">2,568</span>
-                </h3>
-            </div>
-            <div class="record-item box-blue">
-                <h3>
-                    <img src="<?php echo _uri.'/resources/images/track-records/img-assets-refinanced.png'; ?>" alt="Assets Refinanced">
-                    Assets Refinanced
-                    <span class="record-value">21</span>
-                </h3>
-            </div>
-            <div class="record-item box-blue">
-                <h3>
-                    <img src="<?php echo _uri.'/resources/images/track-records/img-assets-sold.png'; ?>" alt="Assets Sold">
-                    Assets Sold
-                    <span class="record-value">73</span>
-                </h3>
-            </div>
-            <div class="record-item box-blue">
-                <h3>
-                    <img src="<?php echo _uri.'/resources/images/track-records/img-properties.png'; ?>" alt="Properties">
-                    Properties
-                    <span class="record-value">177</span>
-                </h3>
-            </div>
-            <div class="record-item box-blue">
-                <h3>
-                    <img src="<?php echo _uri.'/resources/images/track-records/img-states.png'; ?>" alt="States">
-                    States
-                    <span class="record-value">30</span>
-                </h3>
-            </div>
-            <div class="record-item alt box-dark-green">
-                <div class="record-info">
-                    $595.7
-                    <span class="notation">Million</span>
-                    <small>Total Cash Distribution Delivered</small>
-                </div>
-            </div>
-            <div class="record-item alt box-light-green">
-                <div class="record-info">
-                    $3.3
-                    <span class="notation">Billion</span>
-                    <small>Managed Portfolio Value</small>
-                </div>
-            </div>
-            <div class="record-item alt box-orange">
-                <div class="record-info">
-                    24.5
-                    <span class="notation">Million</span>
-                    <small>Managed Portfolio Square Footage</small>
-                </div>
-            </div>
-        </div>
-    </div>    
+    <?php do_action( 'TrackRecord' ); ?>   
 </header>
 
 <?php elseif ( is_page( 12 ) ) : // Our Team ?>
@@ -136,7 +51,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 </header>

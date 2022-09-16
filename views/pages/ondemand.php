@@ -3,7 +3,7 @@
 $user = wp_get_current_user();
 $role = $user->roles[0];
 
-if ( $role !== 'administrator' ) :
+// if ( $role !== 'administrator' ) :
 
     // If user is not logged-in, redirect to login
     if ( !is_user_logged_in() && is_page([ 38, 40, 42, 45, 49 ]) ) {
@@ -42,11 +42,11 @@ if ( $role !== 'administrator' ) :
         get_template_part( _ondemand.'reset' );
     }
 
-endif;
+// endif;
 
-if ( $role === 'administrator' ) :
+// if ( $role === 'administrator' ) :
 
-    wp_redirect( esc_url( site_url('acmx?wppb_force_wp_login=true') ) );
-    exit;
+//     wp_redirect( esc_url( site_url('acmx?wppb_force_wp_login=true') ) );
+//     exit;
 
-endif;
+// endif;
