@@ -10,7 +10,7 @@ function news_sticky() {
         'posts_per_page' => 2,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'DESC',
+        'order'          => 'ASC',
         // For Sticky Posts
         'ignore_sticky_posts' => 5,
         'post__in' => $sticky
@@ -56,7 +56,7 @@ function news_sticky() {
         'posts_per_page' => 4,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'DESC',
+        'order'          => 'ASC',
         'orderby'        => 'rand',
         'post__not_in'   => $sticky,
         'ignore_sticky_posts' => 1
@@ -101,7 +101,7 @@ function news_random() {
         'posts_per_page' => 5,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'DESC',
+        'order'          => 'ASC',
         'orderby'        => 'rand',
     ]);
 
