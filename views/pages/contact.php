@@ -30,7 +30,7 @@ if ( isset($_GET['cid']) ) {
                     </div>
                 </div>
                 <div>
-                    <?php echo do_shortcode( '[wpforms id="959"]' ); ?>
+                    <?php echo do_shortcode( '[wpforms id="967" title="false"]' ); ?>
                 </div>
             </div>
         </section>
