@@ -114,6 +114,32 @@
 
 
 .news-lists {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: 'NAS NEWS';
+        position: absolute;
+        top: -200px;
+        right: -10%;
+        @include proxima_black();
+        display: inline-block;
+        // font-size: 40rem;
+        font-size: 30rem;
+        color: rgba(#000,.03);
+        text-align: right;
+        letter-spacing: -0.22em;
+        line-height: 1;
+        width: 100%;
+        white-space: nowrap;
+        vertical-align: text-top;
+        overflow-x: hidden;
+        z-index: -1;
+    }
+
+    .uk-headings {
+        margin-bottom: 30px;
+    }
 
     .uk-card {
         border-radius: 2px;
@@ -122,6 +148,14 @@
 
     .uk-card-body {
         padding: 2em;
+    }
+
+}
+
+.more-news-lists {
+
+    .uk-headings {
+        margin-bottom: 30px;
     }
 
 }
