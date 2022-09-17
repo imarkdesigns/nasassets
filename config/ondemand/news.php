@@ -102,7 +102,7 @@ function news_random() {
         'post_status'    => 'publish',
         'has_password'   => false,
         'order'          => 'ASC',
-        'orderby'        => 'rand',
+        // 'orderby'        => 'rand',
     ]);
 
     foreach ( $news_query as $news ) :
