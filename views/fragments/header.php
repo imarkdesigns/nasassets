@@ -148,4 +148,20 @@ $designation = get_field( 'profile_designation' ); ?>
     </div>
 </nav>
 
+<?php elseif ( is_page([ 14, 16, 22, 32 ]) ) : ?>
+
+<header class="hero | uk-position-relative">
+
+    <div class="uk-cover-container">
+        <canvas width="1920" height="450"></canvas>
+        <img src="//placem.at/places?w=1920&h=900&txt=0&random=1" alt="" uk-cover>
+
+        <div class="uk-overlay-primary uk-position-cover"></div>
+        <div class="uk-overlay uk-position-bottom-center uk-position-medium uk-text-center uk-light">
+            <h1><?php the_title(); ?></h1>
+        </div>
+    </div>
+
+</header>
+
 <?php endif; ?>
