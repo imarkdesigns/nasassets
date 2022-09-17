@@ -142,9 +142,23 @@
     }
 
     .uk-card {
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: hidden;
         box-shadow: 0 0 2px 0 rgba(#000,.15);
+
+        .uk-card-media-left,
+        .uk-card-media-top {
+            overflow: hidden;
+        }
+
+        .uk-card-media-left img,
+        .uk-card-media-top img {
+            transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
     }
 
     .uk-card-body {

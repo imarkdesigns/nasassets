@@ -7,7 +7,7 @@
                 <h2>Latest News</h2>
             </div>
 
-            <div class="uk-grid-match uk-flex-center" uk-grid>
+            <div class="uk-grid-match uk-flex-center " uk-grid>
             <?php $featuredNews = [ 'post_type' => 'post', 'posts_per_page' => 1, 'order' => 'ASC', 'ignore_sticky_posts' => true ];
                 query_posts( $featuredNews );
                 
