@@ -57,7 +57,7 @@ function news_sticky() {
         'post_status'    => 'publish',
         'has_password'   => false,
         'order'          => 'ASC',
-        'orderby'        => 'rand',
+        // 'orderby'        => 'rand',
         'post__not_in'   => $sticky,
         'ignore_sticky_posts' => 1
     ]);
