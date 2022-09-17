@@ -118,10 +118,10 @@
     overflow: hidden;
 
     &::after {
-        content: 'NAS NEWS';
+        content: 'NAS News';
         position: absolute;
         top: -200px;
-        right: -10%;
+        right: 0;
         @include proxima_black();
         display: inline-block;
         // font-size: 40rem;
@@ -142,8 +142,9 @@
     }
 
     .uk-card {
-        border-radius: 2px;
+        border-radius: 10px;
         overflow: hidden;
+        box-shadow: 0 0 2px 0 rgba(#000,.15);
     }
 
     .uk-card-body {
@@ -151,15 +152,21 @@
     }
 
     .news-highlight .uk-card-body .title-headline {
+        @include proxima_bold();
         font-size: 2rem;
+        line-height: 1;
     }
 
     .listitem-medium .uk-card-body .title-headline {
+        @include proxima_semibold();
         font-size: 1.5rem;
+        line-height: 1.2;
     }
 
     .listitem-small .uk-card-body .title-headline {
+        @include proxima_semibold();
         font-size: 1.125rem;
+        line-height: 1.2;
     }
 
 

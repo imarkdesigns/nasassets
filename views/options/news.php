@@ -11,15 +11,22 @@
                     </div>
                 </li>
                 <?php 
-                $news = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'ASC', 'orderby' => 'menu_order', 'ignore_sticky_posts' => true ];
+                $news = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'ASC', 'ignore_sticky_posts' => true ];
                 query_posts( $news );
 
                 while ( have_posts() ) : the_post(); ?>
                 <li>
                     <figure class="uk-inline">
-                        <img src="//placem.at/places?w=640&h=550&txt=0&random=20<?php echo $post->ID; ?>" width="640" height="550" alt="">
+                        <?php 
+                        if ( has_post_thumbnail($post->ID) ) {
+                            $featuredID = get_post_thumbnail_id($post->ID);
+                            echo wp_get_attachment_image( $featuredID, 'large' );
+                        } else {
+                            echo '<img src="//placem.at/places?w=640&h=550&txt=0&random=20'.$post->ID.'" width="640" height="550" alt="">';
+                        } ?>                        
                         <figcaption class="uk-overlay-primary uk-position-cover uk-padding">
-                            <span class="news-category">News</span>
+                            <?php $term_cat = get_the_terms( $post->ID, 'category' ); ?>
+                            <span class="news-category"><?php echo $term_cat[0]->name; ?></span>
                             <h3 class="news-title"><?php the_title(); ?></h3>
                         </figcaption>
                     </figure>
