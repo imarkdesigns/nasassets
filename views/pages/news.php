@@ -8,7 +8,7 @@
             </div>
 
             <div class="uk-grid-match uk-flex-center " uk-grid>
-            <?php $featuredNews = [ 'post_type' => 'post', 'posts_per_page' => 1, 'order' => 'ASC', 'ignore_sticky_posts' => true ];
+            <?php $featuredNews = [ 'post_type' => 'post', 'posts_per_page' => 1, 'order' => 'DESC', 'ignore_sticky_posts' => true ];
                 query_posts( $featuredNews );
                 
                 while ( have_posts() ) : the_post(); ?>
@@ -40,7 +40,7 @@
 
                 $sticky = get_option( 'sticky_posts' );
                 $firstBatchIDs = array_merge($sticky, $featuredPostID);
-                $stickyNews = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'ASC', 'post__not_in' => $firstBatchIDs, 'ignore_sticky_posts' => 1 ];
+                $stickyNews = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'DESC', 'post__not_in' => $firstBatchIDs, 'ignore_sticky_posts' => 1 ];
                 query_posts( $stickyNews );
                 
                 $allPostIDs = [];
@@ -67,7 +67,7 @@
                 <?php endwhile;
 
                 $secondBatchIDs = array_merge($allPostIDs, $featuredPostID);
-                $LatestListNews = [ 'post_type' => 'post', 'posts_per_page' => 8, 'order' => 'ASC', 'post__not_in' => $secondBatchIDs, 'ignore_sticky_posts' => 1 ];
+                $LatestListNews = [ 'post_type' => 'post', 'posts_per_page' => 8, 'order' => 'DESC', 'post__not_in' => $secondBatchIDs, 'ignore_sticky_posts' => 1 ];
                 query_posts( $LatestListNews );
 
                 while ( have_posts() ) : the_post(); ?>

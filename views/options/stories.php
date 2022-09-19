@@ -29,7 +29,7 @@ if ( !is_home() ) {
                     <?php 
                     if ( has_post_thumbnail($post->ID) ) {
                         $featuredID = get_post_thumbnail_id($post->ID);
-                        echo wp_get_attachment_image( $featuredID, 'large' );
+                        echo wp_get_attachment_image( $featuredID, 'stories-vertical-thumb' );
                     } else {
                         echo '<img src="//placem.at/places?w=640&h=700&txt=0&random=30'.$post->ID.'" width="640" height="700" alt="">';
                     } ?>                    
