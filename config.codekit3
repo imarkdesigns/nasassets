@@ -1523,12 +1523,20 @@
       "oAP" : "\/views\/pages\/team.php",
       "oF" : 0
     },
-    "\/views\/singles\/property-ondemand.php" : {
+    "\/views\/singles\/ondemand-property.php" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/views\/singles\/property-ondemand.php",
+      "oAP" : "\/views\/singles\/ondemand-property.php",
+      "oF" : 0
+    },
+    "\/views\/singles\/success-story.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/views\/singles\/success-story.php",
       "oF" : 0
     },
     "\/views\/singles\/team-profile.php" : {
