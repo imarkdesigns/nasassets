@@ -8,9 +8,9 @@ if ( !is_home() ) {
 
 ?>
 <a href="#main" id="skipToLink" class="skip-to-content-link">Skip to Content</a>
-<div <?=$class;?> nas-global="menu">
+<div <?php echo $class; ?> nas-global="menu">
 
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-container" uk-navbar uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
         <div class="uk-navbar-left">
             <a class="navbar | uk-navbar-item uk-logo" href="<?php echo home_url(); ?>" aria-label="<?php bloginfo(); ?>"></a>
         </div>
@@ -21,17 +21,17 @@ if ( !is_home() ) {
                     <span uk-search-icon></span>
                     <input class="uk-search-input" type="search" name="s" placeholder="Type your subject keywords here & press enter..." autocomplete="off" autofocus>
                 </form>
-                <a id="close-search" class="uk-navbar-toggle uk-position-center-right uk-position-small" uk-close uk-toggle="target: .navbar; animation: uk-animation-fade" href="#"></a>              
+                <a id="close-search" class="uk-navbar-toggle uk-position-center-right uk-position-small" uk-close uk-toggle="target: .navbar; animation: uk-animation-fade" href="#" aria-label="Close Search"></a>              
                 <div class="quick-links | uk-background-muted">
                     <strong>Quick Links</strong>
                     <ul class="uk-list">
-                        <li><a href="#">About NAS</a></li>
-                        <li><a href="#">Frequently Asked Questions</a></li>
-                        <li><a href="#">Client Comments</a></li>
-                        <li><a href="#">Property Management</a></li>
-                        <li><a href="#">Loan Maturity Solutions</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 9 ) ); ?>">About NAS</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 20 ) ); ?>">Frequently Asked Questions</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 16 ) ); ?>">Client Comments</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 26 ) ); ?>">Property Management</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 18 ) ); ?>">Loan Maturity Solutions</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 12 ) ); ?>">Our Team</a></li>
+                        <li><a href="<?php echo esc_url( get_permalink( 32 ) ); ?>">Contact</a></li>
                     </ul>
                 </div>                
             </div>

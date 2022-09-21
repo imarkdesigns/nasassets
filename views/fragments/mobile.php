@@ -1,6 +1,6 @@
 <div id="mobile-menu" uk-offcanvas="flip: true; overlay: true; mode: reveal">
     <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close Side Menu"></button>
 
         <ul class="uk-nav uk-nav-default">
             <li class="uk-active"><a href="#">Active</a></li>

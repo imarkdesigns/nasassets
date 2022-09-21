@@ -3,7 +3,7 @@
 <section class="about | uk-section">
     <div class="uk-container uk-container-large">
         
-        <article class="uk-article uk-child-width-1-2@m uk-flex-bottom" uk-grid>
+        <article class="uk-article uk-child-width-1-2@m uk-flex-top" uk-grid>
             <div>
                 <div class="uk-panel">
                     <h2>The <span class="uk-text-success">NAS</span> Brand of <br> 
@@ -14,6 +14,11 @@
                 <div class="uk-panel">
                     <p>Since 2008, NAS has served 2,568 investment clients and has established an impressive track record for investment property management. The track record includes generating over $595 million in cash distributions to property investors and managing a commercial real estate portfolio of 177 diverse commercial properties, comprised of 24.5 million square-feet, in 30 states. The overall value of NAS' managed portfolio in the company's 13-year history, totals over $3.305 billion.</p>
                     <p>National Asset Services was founded on the unwavering principle of putting our clients' best interests above everything else. This is a cornerstone of building trust. NAS is an incredible team of people who strongly believe in this ethic. Good intentions are not enough, however, to achieve positive results in the real estate world on a consistent basis. It also takes a lot of hard work and a wealth of experience and expertise.</p>
+                    <div class="excerpt | uk-margin-bottom" hidden>
+                        <p>That experience and expertise has come from managing hundreds of properties, during many phases of a property’s life cycle. The NAS team has worked with over 90 ownership groups who have invested in different property types, located in very diverse markets. These properties have been managed at a time when uncertainty seemed the only constant variable. The NAS team has also seen first-hand how market trends, mismanagement and unidentified realities can affect the performance of a property. Our clients have come to know our integrity, understanding of real estate markets and commitment to excellent service through the myriad of challenges and successes we’ve shared.</p>
+                        <p>NAS has earned the confidence and faith that has been bestowed upon the management team because of the professional expertise that have been developed over the many years of the company executives’ commercial real estate tenure. The NAS team knows that every single client has worked hard for their investment capital and are dedicated to maximizing returns on each investment.</p>
+                    </div>
+                    <button type="button" class="toggle-excerpt" uk-toggle="target: .excerpt; animation: uk-animation-fade"> Read More </button>
                 </div>
             </div>
             <div class="uk-width-1-1">

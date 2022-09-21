@@ -7,14 +7,27 @@
 
 .about {
 
+
     h2 {
         @include bodoni();
         font-size: 3rem;
         line-height: 1;
+        transition: 300ms ease-out;
 
         .uk-text-success {
             color: $highlight-txt !important;
         }
+    }
+
+    .toggle-excerpt {
+        appearance: none;
+        background-color: transparent;
+        @include proxima_regular();
+        font-size: 1rem;
+        color: #666;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
     }
 
     .uk-panel figure {
@@ -65,6 +78,7 @@
         h3 {
             @include bodoni();
             font-size: 3rem;
+            color: rgba(#FFF,.8);
             line-height: 1;
 
             small {

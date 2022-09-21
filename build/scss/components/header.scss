@@ -13,11 +13,12 @@
             @include bodoni();
             // font-size: clamp(2rem, -2.1703rem + 14vw, 7.5rem);
             font-size: 2.5rem;
+            color: rgba(#FFF,.8);
             line-height: .85;
         }
 
         span {
-            color: $highlight-txt;
+            color: rgba($highlight-txt,.8);
         }
 
         ul {
@@ -75,7 +76,7 @@
         small {
             display: block;
             font-size: 0.875rem;
-            color: darken(#FFF,35%);
+            color: rgba(#CCC,.8);
         }
 
         @media ( min-width: 640px ) {
