@@ -11,7 +11,7 @@
                     </div>
                 </li>
                 <?php 
-                $news = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'ASC', 'ignore_sticky_posts' => true ];
+                $news = [ 'post_type' => 'post', 'posts_per_page' => 6, 'order' => 'DESC', 'ignore_sticky_posts' => true ];
                 query_posts( $news );
 
                 while ( have_posts() ) : the_post(); ?>
