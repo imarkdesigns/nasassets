@@ -48,15 +48,22 @@
                     </div>
                 </div>
                 <div class="nasis-brochure">
+                    <?php 
+                    $brochure = get_field( 'pdf_brochure_file', 'option' );
+                    $pbTitle = get_field( 'pb_title', 'option' );
+                    $pbLabel = get_field( 'pb_btn_label', 'option' ); 
+
+                    $brochure_thumb = explode("pdf", $brochure['url']);
+                    $brochure_thumb = substr($brochure_thumb[0], 0, -1);
+                    $brochure_thumb = $brochure_thumb . '-pdf.jpg'; ?>
                     <div class="uk-card uk-card-small uk-grid-collapse" uk-grid>
-                        <div class="uk-card-media-left uk-width-auto uk-cover-container">
-                            <img src="//placem.at/things?w=70&h=90&txt=0&random=1" alt="" uk-cover>
-                            <canvas width="70" height="90"></canvas>
+                        <div class="uk-card-media-left uk-width-1-1 uk-cover-container">
+                            <img src="<?php echo $brochure_thumb; ?>" alt="<?php echo $pbTitle; ?>" uk-cover>
                         </div>
                         <div class="uk-width-expand">
                             <div class="uk-card-body">
-                                <h3 class="uk-card-title">Download Free - 1031: A Guide Through the Tax Deferred Real Estate Investment Process.</h3>
-                                <p><a href="#">Download Free NASIS Guide Here</a></p>
+                                <h3 class="uk-card-title"><?php echo $pbTitle; ?></h3>
+                                <p><a href="<?php echo esc_url( $brochure['link'] ); ?>"><?php echo esc_html( $pbLabel ); ?></a></p>
                             </div>
                         </div>
                     </div>
