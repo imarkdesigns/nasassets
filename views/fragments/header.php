@@ -123,7 +123,7 @@ $designation = get_field( 'profile_designation' ); ?>
 
 <?php elseif ( is_home() ) : ?>
 
-<nav class="hero-localnav | uk-background-muted">
+<nav class="hero-localnav | uk-background-primary">
     <div class="uk-container">
         <div class="uk-flex uk-flex-between uk-flex-middle overflow">
 
