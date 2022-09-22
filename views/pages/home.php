@@ -50,11 +50,14 @@
                     <div uk-slideshow="animation: pull; autoplay: true; min-height: 360; max-height: 510">
                         <div class="uk-visible-toggle uk-light" tabindex="-1">
                             <ul class="uk-slideshow-items">
-                                <?php for ( $n=0;$n<3;$n++ ) : ?>
+                                <?php 
+                                $slides = [ 'press-ganey-slide1.jpg', 'press-ganey-slide2.jpg', 'press-ganey-slide3.jpg', 'press-ganey-slide4.jpg' ];
+                                $slides_details = [ 'Press Ganey National Headquarters', 'Press Ganey Interior', 'Press Ganey Interior', 'Press Ganey Exterior' ];
+                                for ( $n=0;$n<4;$n++ ) : ?>
                                 <li>
-                                    <img src="//placem.at/places?w=1280&h=510&txt=0&random=32<?=$n?>" alt="" uk-cover>
+                                    <img src="<?php echo _uri.'/resources/images/client-comments/'.$slides[$n]; ?>" alt="" uk-cover>
                                     <div class="slideshow-caption | uk-overlay uk-overlay-primary uk-position-bottom uk-transition-slide-bottom">
-                                        Press Ganey National Headquarters
+                                        <?php echo $slides_details[$n]; ?>
                                     </div>
                                 </li>
                                 <?php endfor; ?>

@@ -86,11 +86,15 @@ $designation = get_field( 'profile_designation' ); ?>
 
     <div class="uk-cover-container">
         <canvas width="1920" height="450"></canvas>
-        <img src="//placem.at/places?w=1920&h=900&txt=0&random=1" alt="" uk-cover>
+        <img src="<?php echo _uri.'/resources/images/press-ganey-featured-photo.jpg' ?>" alt="" uk-cover>
 
         <div class="uk-overlay-primary uk-position-cover"></div>
         <div class="uk-overlay uk-position-bottom-center uk-position-medium uk-text-center uk-light">
             <h1>NAS Managed Properties Since 2008</h1>
+            <div class="uk-panel uk-width-2xlarge uk-margin-auto">
+                <p class="uk-text-lead">Investment Property Management Portfolio</p>
+                <p>Since 2008, NAS has served 2,568 investment clients and has established an impressive track record for investment property management. The track record includes generating over $595 million in cash distributions to property investors and managing a commercial real estate portfolio of 177 diverse commercial properties, comprised of 24.5 million square-feet, in 30 states. The overall value of NAS' managed portfolio in the company's 13-year history, totals over $3.305 billion.</p>
+            </div>
         </div>
     </div>
 

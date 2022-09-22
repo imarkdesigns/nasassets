@@ -436,8 +436,10 @@
 
 .hero.map {
 
+
     .uk-cover-container canvas {
-        min-height: 300px;
+        min-height: 480px;
+        height: calc( 100vh / 2 );
 
         + img {
             object-fit: cover;
@@ -446,8 +448,20 @@
 
     .uk-cover-container h1 {
         @include bodoni();
-        font-size: clamp(1.125rem, 0.2813rem + 4.2188vw, 4.5rem);
-        line-height: .8;
+        font-size: clamp(2.125rem, 0.2813rem + 4.2188vw, 4.5rem);
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    .uk-overlay-primary {
+        background: linear-gradient( to top, rgba(#000,.75) 35%, rgba(#000,0) );
+    }
+
+    .uk-panel .uk-text-lead {
+        @include proxima_semibold();
+        font-size: 1.25rem;
+        @include sharpText();
+        line-height: 1;
     }
 
 }
@@ -481,7 +495,7 @@
         @include bodoni();
         display: block;
         font-size: 1.25rem;
-        // color: #FFF;
+        color: #FFF;
         text-transform: capitalize;
         max-width: 300px;
         margin-right: 60px !important;

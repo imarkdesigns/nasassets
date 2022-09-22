@@ -529,6 +529,58 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/resources\/images\/client-comments\/press-ganey-slide1.jpg" : {
+      "ft" : 16384,
+      "iS" : 801286,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/client-comments\/press-ganey-slide1.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/client-comments\/press-ganey-slide2.jpg" : {
+      "ft" : 16384,
+      "iS" : 283334,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/client-comments\/press-ganey-slide2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/client-comments\/press-ganey-slide3.jpg" : {
+      "ft" : 16384,
+      "iS" : 222473,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/client-comments\/press-ganey-slide3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/client-comments\/press-ganey-slide4.jpg" : {
+      "ft" : 16384,
+      "iS" : 245227,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/client-comments\/press-ganey-slide4.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/resources\/images\/elfsight\/marker-golf_course.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -1021,6 +1073,19 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/resources\/images\/press-ganey-featured-photo.jpg" : {
+      "ft" : 16384,
+      "iS" : 801286,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/resources\/images\/press-ganey-featured-photo.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

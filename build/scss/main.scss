@@ -195,9 +195,11 @@
         .uk-slideshow-nav {
             gap: 10px;
 
+            position: relative;
             margin-left: 0;
             margin-right: 65px;
             margin-top: 5px;
+            z-index: 10001;
 
             * {
                 padding-left: 0;
