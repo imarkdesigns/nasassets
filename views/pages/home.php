@@ -73,7 +73,7 @@
             </div>
             <div class="uk-width-expand@l uk-flex-first uk-flex-last@l">
 
-                <?php $quote = [ 'post_type' => 'nas-comments', 'posts_per_page' => 1, 'orderby' => 'rand' ];
+                <?php $quote = [ 'post_type' => 'nas-comments', 'posts_per_page' => 1, 'meta_key' => 'featured_comments', 'orderby' => 'rand meta_value' ];
                 query_posts( $quote ); ?>                
                 <div class="featured-comments | uk-panel">
                     <div class="uk-headings">
