@@ -495,7 +495,7 @@
         @include bodoni();
         display: block;
         font-size: 1.25rem;
-        color: #FFF;
+        color: rgba(#FFF,.8);
         text-transform: capitalize;
         max-width: 300px;
         margin-right: 60px !important;
@@ -531,4 +531,8 @@
 
     }
 
+}
+
+.blog .hero-localnav h1 {
+    color: rgba(#000,.8);
 }

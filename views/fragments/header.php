@@ -135,7 +135,22 @@ $designation = get_field( 'profile_designation' ); ?>
                 <div>
                     <button type="button" class="uk-button uk-button-small">News Categories <span uk-icon="icon: chevron-down; ratio: .7"></span></button>
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="mode: click; stretch: x; target: !.hero-localnav; animation: slide-top; animate-out: true; duration: 700">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <div class="uk-container">
+                            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-grid-small uk-flex-between" uk-grid>
+                            <?php $categories = get_categories();
+                            foreach ( $categories as $category ) : ?>
+                                <div>
+                                    <?php
+                                    printf( '<a class="uk-link-reset" href="%1$s">%2$s</a><br />',
+                                            esc_url( get_category_link( $category->term_id ) ),
+                                            esc_html( $category->name )
+                                        );
+                                    ?>
+                                </div>
+                            <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <ul class="uk-nav uk-navbar-dropdown-nav" hidden>
                             <li class="uk-active"><a href="#">Active</a></li>
                             <li><a href="#">Item</a></li>
                             <li class="uk-nav-header">Header</li>
