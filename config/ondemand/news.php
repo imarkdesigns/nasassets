@@ -10,7 +10,7 @@ function news_sticky() {
         'posts_per_page' => 2,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'ASC',
+        'order'          => 'DESC',
         // For Sticky Posts
         'ignore_sticky_posts' => 5,
         'post__in' => $sticky
@@ -28,8 +28,8 @@ function news_sticky() {
             <div class="uk-card uk-grid-collapse | featured-news" uk-grid>
                 <div class="uk-card-media-left uk-cover-container uk-width-1-2@s">
                     <?php 
-                    if ( has_post_thumbnail($postID) ) {
-                        $featuredID = get_post_thumbnail_id($postID);
+                    if ( has_post_thumbnail($stickyID) ) {
+                        $featuredID = get_post_thumbnail_id($stickyID);
                         echo wp_get_attachment_image( $featuredID, 'medium', '', [ 'uk-cover' => '' ] );
                         echo '<canvas width="640" height="360"></canvas>';
                     } else {
@@ -56,7 +56,7 @@ function news_sticky() {
         'posts_per_page' => 4,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'ASC',
+        'order'          => 'DESC',
         // 'orderby'        => 'rand',
         'post__not_in'   => $sticky,
         'ignore_sticky_posts' => 1
@@ -101,7 +101,7 @@ function news_random() {
         'posts_per_page' => 5,
         'post_status'    => 'publish',
         'has_password'   => false,
-        'order'          => 'ASC',
+        'order'          => 'DESC',
         // 'orderby'        => 'rand',
     ]);
 

@@ -32,7 +32,7 @@
                     <div class="uk-card uk-card-small">
                         <div class="uk-card-header">
                             <img src="<?php echo _uri.'/resources/images/ondemand/nasis-logo.png'; ?>" width="100" height="25" alt="NASIS Logo">
-                            <h3>Available dst properties fractional interests starting at $100K</h3>
+                            <h2>Available dst properties fractional interests starting at $100K</h2>
                             <p>Quality DST properties underwritten by the NASIS team. 1031 Exchange Eligible, Dependable Closings, Self-Directed IRA Qualified</p>
                         </div>
                         <div class="uk-card-body">

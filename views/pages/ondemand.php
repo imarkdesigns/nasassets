@@ -1,7 +1,7 @@
 <?php
 // Get User's Role
-$user = wp_get_current_user();
-$role = $user->roles[0];
+// $user = wp_get_current_user();
+// $role = $user->roles[0];
 
 // if ( $role !== 'administrator' ) :
 

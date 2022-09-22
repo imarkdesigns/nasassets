@@ -1,11 +1,23 @@
 <?php 
 global $post;
-switch ( $post->ID ) {
+// switch ( $post->ID ) {
 
-    case '38': $dashboard = 'class="uk-active"'; break;
-    case '40': $profile   = 'class="uk-active"'; break;
+//     case '38': 
+//         $dashboard = 'class="uk-active"'; 
+//         break;
+//     case '40': $profile   = 'class="uk-active"'; break;
 
-}
+// }
+
+// echo $dashboard;
+// echo '<br>';
+// echo $profile;
+
+// if ( $post->ID == '38' ) {
+//     $classActive = 'class="uk-active"';
+// } else if ( $post->ID == 'class="uk-active"' ) {
+//     $classActive = 'class="uk-active"';
+// }
 
 $current_user = wp_get_current_user();
 $display_name = $current_user->display_name;
@@ -58,8 +70,8 @@ if ( wp_is_mobile() ) : ?>
                     <div class="uk-flex uk-flex-between uk-visible@l">
                         <div>
                             <ul class="uk-subnav">
-                                <li <?php echo $dashboard; ?>><a href="<?php echo get_permalink( 38 ); ?>">Dashboard</a></li>
-                                <li <?php echo $profile; ?>><a href="<?php echo get_permalink( 40 ); ?>">Profile</a></li>
+                                <li <?php echo ( $post->ID == '38' ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 38 ); ?>">Dashboard</a></li>
+                                <li <?php echo ( $post->ID == '40' ) ? 'class="uk-active"' : ''; ?>><a href="<?php echo get_permalink( 40 ); ?>">Profile</a></li>
                                 <li><a href="<?php echo get_permalink( 32 ); ?>" target="_blank">Contact NAS</a></li>
                                 <li><a href="<?php echo get_permalink( 28 ); ?>" target="_blank">NAS News</a></li>
                             </ul>                            
