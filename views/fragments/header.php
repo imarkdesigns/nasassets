@@ -125,7 +125,7 @@ $designation = get_field( 'profile_designation' ); ?>
 <?php elseif ( is_home() ) : ?>
 
 <nav class="hero-localnav | uk-background-muted">
-    <div class="uk-container uk-container-expand">
+    <div class="uk-container">
         <div class="uk-flex uk-flex-between uk-flex-middle overflow">
 
             <div>
@@ -133,7 +133,7 @@ $designation = get_field( 'profile_designation' ); ?>
             </div>
             <div>
                 <div>
-                    <button type="button" class="uk-button uk-button-small">Popular Categories <span uk-icon="icon: chevron-down; ratio: .7"></span></button>
+                    <button type="button" class="uk-button uk-button-small">News Categories <span uk-icon="icon: chevron-down; ratio: .7"></span></button>
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="mode: click; stretch: x; target: !.hero-localnav; animation: slide-top; animate-out: true; duration: 700">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li class="uk-active"><a href="#">Active</a></li>
