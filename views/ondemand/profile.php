@@ -28,22 +28,26 @@
             </div>
 
             <div class="uk-panel | nas-investments">
+                <?php
+                $dstContent = get_field( 'dst_content', 'option' );
+                $dstPhoto   = get_field( 'dst_photo', 'option' );
+                $dstURL     = get_field( 'dst_url', 'option' );
+                $dstLabel   = get_field( 'dst_btn_label', 'option' ); ?>
                 <div class="nasis-property">
-                    <div class="uk-card uk-card-small">
+                    <div class="uk-card uk-card-secondary uk-card-small">
                         <div class="uk-card-header">
                             <img src="<?php echo _uri.'/resources/images/ondemand/nasis-logo.png'; ?>" width="100" height="25" alt="NASIS Logo">
-                            <h2>Available dst properties fractional interests starting at $100K</h2>
-                            <p>Quality DST properties underwritten by the NASIS team. 1031 Exchange Eligible, Dependable Closings, Self-Directed IRA Qualified</p>
+                            <?php echo $dstContent; ?>
                         </div>
                         <div class="uk-card-body">
                             <figure class="uk-position-relative uk-margin-small-bottom">
-                                <img src="//www.nasinvestmentsolutions.com/wp-content/uploads/2022/03/Waygate-Header-photo-1920-x-900.jpg" alt="Waygate">
+                                <?php echo wp_get_attachment_image( $dstPhoto['id'], 'full' ); ?>
                                 <div class="uk-overlay-primary uk-position-cover"></div>
                                 <figcaption class="uk-position-small uk-position-top">
-                                    Waygate Technologies Increasing Above Market Cash-On-Cash Returns
+                                    <?php echo $dstPhoto['caption']; ?>
                                 </figcaption>
                             </figure>
-                            <a href="#" class="uk-button uk-button-primary" target="_blank">Learn More</a>
+                            <a href="<?php echo esc_url( $dstURL ); ?>" class="uk-button uk-button-primary" target="_blank"><?php echo esc_html( $dstLabel ); ?></a>
                         </div>
                     </div>
                 </div>
