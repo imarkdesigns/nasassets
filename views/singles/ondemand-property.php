@@ -49,7 +49,7 @@
                                 $email     = get_field( 'profile_email' );
                                 $permalink = get_permalink(); ?>
                                 <div class="uk-card-header">
-                                    <div class="uk-text-uppercase uk-text-center uk-text-small">Property Contact Person</div>
+                                    <div class="uk-text-uppercase uk-text-center uk-text-small">Property Contact</div>
                                 </div>
 
                                 <div class="uk-card-body uk-grid-collapse uk-flex-middle" uk-grid>
