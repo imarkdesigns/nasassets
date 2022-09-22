@@ -98,7 +98,7 @@ $designation = get_field( 'profile_designation' ); ?>
     </div>
 
 </header>
-<nav class="hero-localnav | uk-background-secondary">
+<nav class="hero-localnav | uk-background-primary">
     <div class="uk-container uk-container-expand">
         <div class="uk-flex uk-flex-between uk-flex-middle overflow">
 
@@ -149,15 +149,6 @@ $designation = get_field( 'profile_designation' ); ?>
                             <?php endforeach; ?>
                             </div>
                         </div>
-                        <ul class="uk-nav uk-navbar-dropdown-nav" hidden>
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li class="uk-nav-header">Header</li>
-                            <li><a href="#">Item</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li class="uk-nav-divider"></li>
-                            <li><a href="#">Item</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

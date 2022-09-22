@@ -468,6 +468,10 @@
 
 .hero-localnav {
 
+    &.uk-background-primary {
+        background-color: darken($button,5%);
+    }
+
     .uk-container {
         padding-left: 15px;
         padding-right: 15px;
@@ -509,6 +513,21 @@
     .uk-subnav {
         flex-wrap: nowrap;
         justify-content: flex-start;
+        gap: 15px;
+
+        $boxColor: (#F37125, #E2C239, #223E93, #BB1F2C, #B1D352, #7D3A96, #040707);
+
+        @for $i from 1 through length($boxColor) {
+            > li:nth-child(#{$i})::before {
+                content: '';
+                position: absolute;
+                top: 3.5px;
+                left: 1px;
+                display: block;
+                background-color: nth($boxColor, $i);
+                @include size(12px);
+            }
+        }
 
         > li > a {
             font-size: 0.875rem;

@@ -161,12 +161,14 @@
                     <?php for ($n=0;$n<count($folder);$n++) : 
 
                     if ( $folder[$n] == 'Year-end Tax Packages' ) {
-                        $yetp = 'id="'.strtolower( str_replace(' ','-',$folder[$n]) ).'"';
                         if ( wp_is_mobile() ) {
                             $scrollspy = 'uk-scrollspy="cls: uk-background-primary uk-animation-shake; delay: 25"';
                         }
+                        $yetp = 'id="'.strtolower( str_replace(' ','-',$folder[$n]) ).'"';
+
+                        echo $yetp;
                     } ?>
-                    <li <?php echo $yetp . ' ' . $scrollspy; ?>>
+                    <li <?php # echo $yetp . ' ' . $scrollspy; ?>>
                         <a href="#" class="uk-accordion-title"><?php echo $folder[$n]; ?></a>
                         <div class="uk-accordion-content">
                             <ul uk-accordion>
@@ -238,14 +240,17 @@
                     </div>
                 </div>
                 <div class="nasis-brochure">
-                <?php 
+                    <?php 
                     $brochure = get_field( 'pdf_brochure_file', 'option' );
                     $pbTitle = get_field( 'pb_title', 'option' );
-                    $pbLabel = get_field( 'pb_btn_label', 'option' ); ?>
+                    $pbLabel = get_field( 'pb_btn_label', 'option' ); 
+
+                    $brochure_thumb = explode("pdf", $brochure['url']);
+                    $brochure_thumb = substr($brochure_thumb[0], 0, -1);
+                    $brochure_thumb = $brochure_thumb . '-pdf.jpg'; ?>
                     <div class="uk-card uk-card-small uk-grid-collapse" uk-grid>
                         <div class="uk-card-media-left uk-width-1-1 uk-cover-container">
-                            <!-- <img src="<?php echo esc_attr($icon); ?>" alt="" uk-cover> -->
-                            <?php echo wp_get_attachment_image( $brochure['id'], [ 9999, 90, true ] ); ?>
+                            <img src="<?php echo $brochure_thumb; ?>" alt="<?php echo $pbTitle; ?>" uk-cover>
                         </div>
                         <div class="uk-width-expand">
                             <div class="uk-card-body">

@@ -51,7 +51,7 @@ $vcard   = get_field( 'profile_vcard' );
                         <img src="<?php echo _uri.'/resources/images/img-bio-featured-photo.jpg'; ?>" alt="" uk-cover>
                     </figure>
                 </div>
-                <div>
+                <div class="uk-flex-last uk-flex-first@m">
                     <article class="uk-article">
                         <?php the_field( 'profile_bio' ); ?>
                     </article>
