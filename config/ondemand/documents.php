@@ -113,15 +113,17 @@ function property_dir_alert( $postID ) {
     <?php 
     endif;
 
-    $od_docs = get_posts([ 'post_type' => [ 'nas-ondemand' ], 'posts_per_page' => -1, 'post_status' => [ 'publish' ] ]);
-    foreach ( $od_docs as $doc ) {
-        $post_id = $doc->ID;
+    $od_docs = get_posts([ 'post_type' => [ 'nas-ondemand' ], 'p' => $postID, 'post_status' => [ 'publish' ] ]);
 
-        if ( $doc_featured ) {
-            update_field( 'field_632eb5eebe96a', false, $post_id );
-        }
+    if ( $doc_featured ) {
+        update_field( 'field_632eb5eebe96a', false, $postID );
     }
 
 } // End Property Directory Alert
 
 
+// add_filter('upload_dir', 'awesome_wallpaper_dir');
+// $upload_dir = wp_upload_dir();
+// $uploads = [ $upload_dir['baseurl'], $upload_dir['url'], 'property-documents/'.$post->post_name ];
+
+// filter('acfe/upload_dir/key=field_5f39c8c5f3718', $uploads, $field);

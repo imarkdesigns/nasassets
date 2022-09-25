@@ -15,7 +15,7 @@ get_header( 'ondemand' ); ?>
                 
                 <?php
                     // Alert Notification for Property Documents
-                    do_action( 'property_dir_alert' );
+                    do_action( 'property_dir_alert', $post->ID );
                 ?>
 
                 <section class="uk-section uk-section-xsmall uk-position-relative uk-padding-remove-top | featured-image">
