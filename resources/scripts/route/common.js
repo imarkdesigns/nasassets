@@ -21,6 +21,19 @@
         jQuery('.toggle-excerpt').text('Read More');
     });
 
+    // Check if folder ready to highlight & view
+    $(window).on('load', () => {
+
+        var $properties = jQuery('.my-properties'),
+            $document   = jQuery('.file-management').find('ul.uk-accordion li[data-folder]');
+
+        $properties.find('aside.uk-alert a.highlight-folder').on('click', () => {
+            $document.addClass('tap-highlight uk-open')
+                .find('.uk-accordion-title').attr('aria-expanded','true').parent()
+                .find('.uk-accordion-content').removeAttr('hidden');
+        });
+
+    });
 
 
 })(jQuery);

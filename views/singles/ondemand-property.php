@@ -1,19 +1,22 @@
-<?php get_header( 'ondemand' ); ?>
+<?php 
+// Redirect User if not Logged-In
+if ( !is_user_logged_in() ) {
+    wp_redirect( get_permalink( 36 ) );
+    exit;
+}
+
+get_header( 'ondemand' ); ?>
 <main id="main" class="main" role="main">
+
     <div uk-grid class="uk-grid-collapse" uk-height-viewport="expand: true; min-height: 960; offset-bottom: 80px; offset-top: true">
         <div class="uk-width-expand@m | my-properties">
             <hgroup> <h1><?php the_title(); ?></h1> </hgroup>
             <div uk-overflow-auto>
-                <aside class="uk-alert-warning uk-link-reset uk-text-small" uk-alert>
-                    <a class="uk-alert-close" uk-close></a>
-                    Year-end Tax Packages file was uploaded, ready to view & download. <a href="#" class="uk-text-bold">Click here to view & download</a>
-                    <?php /* if ( wp_is_mobile() ) {
-                        echo '<a href="#year-end-tax-packages" uk-scroll class="uk-text-bold">Click here to view and download</a>';
-                    } else {
-                        echo '<a href="#year-end-tax-packages" uk-toggle="cls: uk-alert-folder" class="uk-text-bold">Click here to view and download</a>';
-                    } */ ?>
-                </aside>
-                <!-- Alert Notification -->
+                
+                <?php
+                    // Alert Notification for Property Documents
+                    do_action( 'property_dir_alert' );
+                ?>
 
                 <section class="uk-section uk-section-xsmall uk-position-relative uk-padding-remove-top | featured-image">
                     <div class="uk-cover-container">
@@ -73,26 +76,6 @@
                     endif; ?>
                 </section>
 
-                <section class="uk-section" hidden>
-                    <?php // $files = get_field('folder_lists'); 
-
-                        while( have_rows('folder_lists') ) : the_row();
-
-                            $sub_value = get_sub_field('document_file');
-
-                            // var_dump($sub_value);
-
-                            $pdf = count($sub_value);
-                            for ( $n=0; $n<$pdf; $n++ ) {
-
-                                echo $sub_value[$n]['title'] . '<br>';
-                            }
-
-                        endwhile;
-                    ?>
-                </section>
-
-
                 <section class="uk-section uk-section-secondary uk-section-xsmall | property-details">
                     <div class="pd-wrapper">
                         <div class="pd-info">
@@ -141,69 +124,10 @@
         </div>
         <div class="uk-width-large@m uk-background-secondary | file-management">
             <hgroup id="property-documents"> <h2>Property Documents</h2> </hgroup>
-            <div uk-overflow-auto>
-                <?php $folder = [
-                    'AM PM Agreements',
-                    'Acquisitions 2017',
-                    'Appraisals and BOVs',
-                    'Budgets',
-                    'Entity Compliance',
-                    'Insurance',
-                    'Loan Documents',
-                    'Monthly Reports',
-                    'Quarterly Operating Statements',
-                    'TIC Documents',
-                    'TIC Meetings',
-                    'Year-end Financials',
-                    'Year-end Tax Packages'
-                ]; ?>
-                <ul uk-accordion>
-                    <?php for ($n=0;$n<count($folder);$n++) : 
-
-                    if ( $folder[$n] == 'Year-end Tax Packages' ) {
-                        if ( wp_is_mobile() ) {
-                            $scrollspy = 'uk-scrollspy="cls: uk-background-primary uk-animation-shake; delay: 25"';
-                        }
-                        $yetp = 'id="'.strtolower( str_replace(' ','-',$folder[$n]) ).'"';
-
-                        echo $yetp;
-                    } ?>
-                    <li <?php # echo $yetp . ' ' . $scrollspy; ?>>
-                        <a href="#" class="uk-accordion-title"><?php echo $folder[$n]; ?></a>
-                        <div class="uk-accordion-content">
-                            <ul uk-accordion>
-                                <li>
-                                    <a href="#" class="uk-accordion-title">PPM</a>
-                                    <div class="uk-accordion-content"></div>
-                                </li>
-                                <li>
-                                    <a href="#" class="uk-accordion-title">Settlement Statement</a>
-                                    <div class="uk-accordion-content"></div>
-                                </li>
-                                <li>
-                                    <a href="#" class="uk-accordion-title">Title</a>
-                                    <div class="uk-accordion-content">
-                                        <ul>
-                                            <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">2200 Bentonville Amendment #2 to PSA FE</a></li>
-                                            <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">Amendment 1 PSA Bentonville (fully executed)</a></li>
-                                            <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">PSA Clorox - NASIS - Fully Executed</a></li>
-                                            <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">Warranty Deed</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">2200 Bentonville Amendment #2 to PSA FE</a></li>
-                                <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">Amendment 1 PSA Bentonville (fully executed)</a></li>
-                                <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">PSA Clorox - NASIS - Fully Executed</a></li>
-                                <li><a href="#" uk-tooltip="title: Click to download; pos: bottom-left">Warranty Deed</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <?php endfor; ?>
-                </ul>
-            </div>
-            <!-- End Overflow -->
+            <?php 
+                // Property Documents
+                do_action( 'property_dir', $post->ID );
+            ?>
             <div class="uk-panel | nasis-available-investments">
             <?php
                 $extURL   = get_field( 'nasis_url', 'option' );

@@ -240,6 +240,33 @@
         margin-top: 0 !important;
     }
 
+    // Animate the Folder - Year-end Tax Packages
+    @keyframes alertFade {
+          0% { background-color: rgba($yellow, .25) }
+         10% { background-color: rgba($yellow, .50) }
+         20% { background-color: rgba($yellow, .50) }
+         30% { background-color: rgba($yellow, .50) }
+         40% { background-color: rgba($yellow, .50) }
+         50% { background-color: rgba($yellow, .50) }
+         60% { background-color: rgba($yellow, .50) }
+         70% { background-color: rgba($yellow, .50) }
+         80% { background-color: rgba($yellow, .50) }
+         90% { background-color: rgba($yellow, .50) }
+        100% { background-color: rgba($yellow, 0) }
+    }
+
+    // @keyframes alertOut {
+    //       0% { background-color: rgba($yellow, .25) }
+    //     100% { background-color: rgba($yellow,   0) }
+    // }
+
+    // Highlight Accordion if tap-highlight is active
+    .uk-accordion li.tap-highlight {
+        animation: alertFade 10000ms ease-in-out;
+        // animation-iteration-count: 2;
+        // background-color: rgba($yellow,.5);
+    }
+
     //
     .nas-investments .nasis-property,
     .nas-investments .nasis-brochure {
@@ -254,19 +281,7 @@
         margin-top: -2em;
     }
 
-    // Animate the Folder - Year-end Tax Packages
-    // @keyframes alertFade {
-    //       0% { background-color: rgba($warning,   0) }
-    //      25% { background-color: rgba($warning, .25) }
-    //      50% { background-color: rgba($warning, .50) }
-    //      75% { background-color: rgba($warning, .25) }
-    //     100% { background-color: rgba($warning,   0) }
-    // }
 
-    // @keyframes alertOut {
-    //       0% { background-color: rgba($warning, .25) }
-    //     100% { background-color: rgba($warning,   0) }
-    // }
     // #year-end-tax-packages.uk-alert-folder {
     //     animation: alertFade 700ms linear;
     //     // animation-iteration-count: 3;

@@ -399,6 +399,14 @@
       "oAP" : "\/config\/includes\/track-records.php",
       "oF" : 0
     },
+    "\/config\/ondemand\/documents.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/config\/ondemand\/documents.php",
+      "oF" : 0
+    },
     "\/config\/ondemand\/news.php" : {
       "cB" : 0,
       "ft" : 8192,

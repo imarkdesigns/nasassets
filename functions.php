@@ -12,6 +12,7 @@ $fn_config = [
     'config/theme.php',
     
     // OnDemand
+    'config/ondemand/documents.php',
     'config/ondemand/news.php',
     'config/ondemand/properties.php',
 
